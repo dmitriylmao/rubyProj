@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в аккаунт</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded-lg shadow-md w-96">
+  <h2 class="text-2xl font-semibold text-center mb-6">Вход</h2>
+  <%= form_for :session do |f| %>
+    <div class="mb-4">
+      <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
+      <%= f.email_field :email, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    </div>
+    <div class="mb-4">
+      <%= f.label :password, class: "block text-sm font-medium text-gray-700" %>
+      <%= f.password_field :password, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    </div>
+    <%= f.submit "Войти", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md" %>
+  <% end %>
+  <p class="mt-4 text-center text-sm text-gray-600">Нет аккаунта? <%= link_to 'Зарегистрироваться', register_path, class: "text-blue-600 hover:underline" %></p>
+</div>
+
+</body>
+</html>
