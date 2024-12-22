@@ -1,0 +1,41 @@
+<div class="flex flex-col items-center justify-center h-screen bg-gray-50 p-4">
+
+  <h1 class="text-4xl font-bold mb-8">Список книг</h1>
+
+  <div class="mb-4">
+    <%= link_to 'Добавить новую книгу', admin_dashboard_new_book_path, class: 'inline-block px-4 py-2 text-white bg-green-600 rounded-md shadow hover:bg-green-700' %>
+  </div>
+  <div class="mb-4">
+    <%= link_to 'Панель', admin_dashboard_path, class: 'text-blue-600 hover:underline' %>
+  </div>
+
+  <table class="min-w-full bg-white rounded-lg shadow">
+    <thead>
+    <tr class="w-full bg-gray-200 text-gray-700">
+      <th class="py-2 px-4 text-left">Название</th>
+      <th class="py-2 px-4 text-left">Автор</th>
+      <th class="py-2 px-4 text-left">Количество в библиотеке</th>
+      <th class="py-2 px-4 text-left">Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @books.each do |book| %>
+      <tr class="border-b hover:bg-gray-100">
+        <td class="py-2 px-4"><%= book.name %></td>
+        <td class="py-2 px-4"><%= book.author %></td>
+        <td class="py-2 px-4"><%= book.count %></td>
+        <td class="py-2 px-4">
+          <% if book.count > 0 %>
+            <%= link_to 'Выдать', admin_dashboard_give_out_book_path(book.id),
+                        { class: 'text-blue-600 hover:underline' } %>
+          <% else %>
+            <span class="text-gray-400">Выдать</span>
+          <% end %>
+          <%= link_to 'Принять', admin_dashboard_take_book_path(book.id), class: 'ml-2 text-red-600 hover:underline' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
