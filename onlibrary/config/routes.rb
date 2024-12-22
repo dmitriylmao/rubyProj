@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/user_dashboard", to: "user_dashboard#index"
+
   get "/admin_dashboard", to: "admin_dashboard#index"
+
+  get "/admin_dashboard/new_book", to: "books#new"
+  post "/admin_dashboard/new_book", to: "books#create"
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest

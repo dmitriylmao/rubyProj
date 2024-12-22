@@ -3130,3 +3130,472 @@ Migrating to CreateOperation (20241222135104)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-12-22 17:18:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | GC: 0.0ms)
+Completed 200 OK in 610ms (Views: 23.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-81e0f86f.css" for 127.0.0.1 at 2024-12-22 17:18:54 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-22 17:18:54 +0300
+Started GET "/register" for 127.0.0.1 at 2024-12-22 17:18:55 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 0.0ms)
+Completed 200 OK in 289ms (Views: 9.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-22 17:18:56 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 17:19:04 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 590ms (ActiveRecord: 11.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:19:05 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 6.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225906860>)
+Caused by: NameError (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225906860>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225906860>):
+     8: 
+     9:     <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+    10: 
+    11:     <%= button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+    12: 
+    13:     <%= button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+    14: 
+  
+app/views/admin_dashboard/index.html.erb:11
+
+Information for cause: NameError (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225906860>):
+  
+app/views/admin_dashboard/index.html.erb:11
+Started GET "/register" for 127.0.0.1 at 2024-12-22 17:19:11 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-22 17:19:11 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-22 17:20:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 17:20:26 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 460ms (ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:20:27 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225d0f970>)
+Caused by: NameError (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225d0f970>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225d0f970>):
+     8: 
+     9:     <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+    10: 
+    11:     <!-- <%= button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+    12: 
+    13:     <%= button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>-->
+    14: 
+  
+app/views/admin_dashboard/index.html.erb:11
+
+Information for cause: NameError (undefined local variable or method `books_path' for an instance of #<Class:0x0000020225d0f970>):
+  
+app/views/admin_dashboard/index.html.erb:11
+Started GET "/login" for 127.0.0.1 at 2024-12-22 17:21:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 17:21:23 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 462ms (ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:21:24 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# app/views/admin/index.html.erb %>
+
+<div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+
+  <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+
+  <div class="space-y-4">
+
+    <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+
+    <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+
+    <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+
+    <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+
+  </div>
+
+</div>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+...pend=( #button_to 'Выдать книгу пользова...
+...                   ^~~~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected constant, expecting ')'
+....append=( button_to 'Выйти из аккаунта', logo...
+...                     ^~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:17: syntax error, unexpected '<'
+  </div>
+  ^
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:19: unknown regexp options - dv
+</div>'.freeze;
+ ^~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:21: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# app/views/admin/index.html.erb %>
+
+<div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+
+  <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+
+  <div class="space-y-4">
+
+    <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+
+    <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+
+    <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+
+    <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+
+  </div>
+
+</div>
+):
+1:    <%# app/views/admin/index.html.erb %>
+2:    
+3:    <div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+4:    
+5:      <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+6:    
+7:      <div class="space-y-4">
+8:    
+9:        <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+10:    
+11:        <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+12:    
+13:        <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+14:    
+15:        <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+16:    
+17:      </div>
+18:    
+19:    </div>
+  
+app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:17: syntax error, unexpected '<'
+app/views/admin_dashboard/index.html.erb:19: unknown regexp options - dv
+app/views/admin_dashboard/index.html.erb:21: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+...pend=( #button_to 'Выдать книгу пользова...
+...                   ^~~~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected constant, expecting ')'
+....append=( button_to 'Выйти из аккаунта', logo...
+...                     ^~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:17: syntax error, unexpected '<'
+  </div>
+  ^
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:19: unknown regexp options - dv
+</div>'.freeze;
+ ^~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:21: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:17: syntax error, unexpected '<'
+app/views/admin_dashboard/index.html.erb:19: unknown regexp options - dv
+app/views/admin_dashboard/index.html.erb:21: unterminated string meets end of file
+Started GET "/login" for 127.0.0.1 at 2024-12-22 17:21:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 17:22:03 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+Started GET "/register" for 127.0.0.1 at 2024-12-22 17:22:03 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 478ms (ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:22:03 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 282ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+
+  <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+
+  <div class="space-y-4">
+
+    <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+
+    <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+
+    <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+
+    <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+
+  </div>
+
+</div>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:11: syntax error, unexpected constant, expecting ')'
+...pend=( #button_to 'Выдать книгу пользова...
+...                   ^~~~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+....append=( button_to 'Выйти из аккаунта', logo...
+...                     ^~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected '<'
+  </div>
+  ^
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:17: unknown regexp options - dv
+</div>'.freeze;
+ ^~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:19: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+
+  <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+
+  <div class="space-y-4">
+
+    <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+
+    <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+
+    <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+
+    <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+
+  </div>
+
+</div>
+):
+1:    <div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+2:    
+3:      <h1 class="text-4xl font-bold mb-10">Администраторская панель</h1>
+4:    
+5:      <div class="space-y-4">
+6:    
+7:        <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition' %>
+8:    
+9:        <%=# button_to 'Посмотреть книги из базы данных', books_path, method: :get, class: 'px-6 py-3 text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition' %>
+10:    
+11:        <%= #button_to 'Выдать книгу пользователю', issue_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+12:    
+13:        <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'px-6 py-3 text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition' %>
+14:    
+15:      </div>
+16:    
+17:    </div>
+  
+app/views/admin_dashboard/index.html.erb:11: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected '<'
+app/views/admin_dashboard/index.html.erb:17: unknown regexp options - dv
+app/views/admin_dashboard/index.html.erb:19: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:11: syntax error, unexpected constant, expecting ')'
+...pend=( #button_to 'Выдать книгу пользова...
+...                   ^~~~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+....append=( button_to 'Выйти из аккаунта', logo...
+...                     ^~~~~~~~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected '<'
+  </div>
+  ^
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:17: unknown regexp options - dv
+</div>'.freeze;
+ ^~~~
+C:/rubyProj/onlibrary/app/views/admin_dashboard/index.html.erb:19: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/admin_dashboard/index.html.erb:11: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:13: syntax error, unexpected constant, expecting ')'
+app/views/admin_dashboard/index.html.erb:15: syntax error, unexpected '<'
+app/views/admin_dashboard/index.html.erb:17: unknown regexp options - dv
+app/views/admin_dashboard/index.html.erb:19: unterminated string meets end of file
+Started GET "/login" for 127.0.0.1 at 2024-12-22 17:23:02 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-22 17:23:05 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 17:23:07 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 444ms (ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:23:07 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 17:23:11 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 17:23:24 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"name"=>"Война и мир", "author"=>"Лев Толстой", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:10:in `create'
+  [1m[36mBook Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' LIMIT 1 /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:10:in `create'
+  [1m[36mBook Create (0.6ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ('Война и мир', 'Лев Толстой', 100, '2024-12-22 14:23:25.175883', '2024-12-22 14:23:25.175883') RETURNING "id" /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:10:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 283ms (ActiveRecord: 5.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 17:23:25 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 270ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
