@@ -5,6 +5,9 @@ class BooksController < ApplicationController
 
   end
 
+  def index
+    @books = Book.all
+  end
   def create
     book = Book.new(book_params)
     if book.save
