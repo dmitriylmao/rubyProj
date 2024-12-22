@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
     user = User.find_by_email(auth_params[:email])
     if user.present? && user.authenticate(auth_params[:password])
       session[:current_user] = user.id
-      redirect_to dashboard_path
+      if user.role == UsersController::Roles::USER
+        redirect_to user_dashboard_path
+      else
+        redirect_to admin_dashboard_path
+      end
     else
       redirect_to login_path
     end
