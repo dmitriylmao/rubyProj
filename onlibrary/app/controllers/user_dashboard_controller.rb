@@ -4,4 +4,9 @@ class UserDashboardController < ApplicationController
 
   end
 
+  def show
+    #TODO:
+    # вернуть список @borrow_books
+  end
+
 end

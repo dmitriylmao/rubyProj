@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/user_dashboard", to: "user_dashboard#index"
+  get "/user_dashboard/borrowed_books", to: "user_dashboard#show"
+
+
 
   get "/admin_dashboard", to: "admin_dashboard#index"
 
@@ -23,21 +26,15 @@ Rails.application.routes.draw do
 
   get "/admin_dashboard/all_books", to: "books#index"
 
-  #get "/admin_dashboard/user", to: "users#show"
   get "/admin_dashboard/give_out_book/:book_id", to: "operations#new", as: "admin_dashboard_give_out_book"
   post "/admin_dashboard/give_out_book/:book_id", to: "operations#create"
 
   get "/admin_dashboard/take_book/:book_id", to: "operations#show", as: "admin_dashboard_take_book"
-  #post "/admin_dashboard/take_book/:book_id", to: "operations#index"
 
   get "/admin_dashboard/take_book/:book_id/:user_id", to: "operations#index", as: "admin_dashboard_take_book_user"
   patch "/admin_dashboard/take_book/:book_id/:user_id", to: "operations#update"
 
-  #get "/admin_dashboard/user_borrowed_books/:user_id", to: "books#show", as: "admin_dashboard_user_borrowed_book"
 
-
-  #post "/admin_dashboard/user", to: "users#create"
-  #get "/admin_dashboard/user/:id", to: "operations#new"
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
