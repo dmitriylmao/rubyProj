@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_22_135104) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_22_210935) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -27,6 +27,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_22_135104) do
     t.bigint "book", null: false
     t.datetime "took", precision: nil, null: false
     t.datetime "returned", precision: nil
+    t.index ["book", "user"], name: "index_operations_on_book_and_user_where_returned_nil", unique: true, where: "(returned IS NULL)"
   end
 
   create_table "users", force: :cascade do |t|
