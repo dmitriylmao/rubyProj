@@ -23,6 +23,14 @@ Rails.application.routes.draw do
 
   get "/admin_dashboard/all_books", to: "books#index"
 
+  #get "/admin_dashboard/user", to: "users#show"
+  get "/admin_dashboard/give_out_book/:book_id", to: "operations#new", as: "admin_dashboard_give_out_book"
+  post "/admin_dashboard/give_out_book/:book_id", to: "operations#create"
+
+
+  #post "/admin_dashboard/user", to: "users#create"
+  #get "/admin_dashboard/user/:id", to: "operations#new"
+
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker

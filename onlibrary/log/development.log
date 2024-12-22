@@ -3716,3 +3716,1150 @@ Processing by AdminDashboardController#index as HTML
 Completed 200 OK in 255ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 19:20:32 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (89.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 101.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 102.8ms | GC: 0.0ms)
+Completed 200 OK in 371ms (Views: 5.4ms | ActiveRecord: 101.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 19:20:37 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 19:20:38 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 19:21:46 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.0ms)
+Completed 200 OK in 265ms (Views: 7.8ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 19:29:40 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.0ms)
+Completed 200 OK in 312ms (Views: 16.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 19:29:41 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 286ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 19:29:41 +0300
+Processing by AdminDashboardController#index as HTML
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 19:29:41 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 336ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-94f39faf.css" for 127.0.0.1 at 2024-12-22 19:29:42 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 338ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 19:29:45 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 19:30:12 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book" for 127.0.0.1 at 2024-12-22 19:30:13 +0300
+Processing by OperationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 19:31:09 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (88.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 92.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 93.8ms | GC: 0.0ms)
+Completed 200 OK in 356ms (Views: 3.0ms | ActiveRecord: 92.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 19:42:31 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (103.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 108.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | GC: 0.0ms)
+Completed 200 OK in 370ms (Views: 5.0ms | ActiveRecord: 107.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:42:33 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 3.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 19:42:34 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:42:37 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 3.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:42:38 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:43:01 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for an instance of Symbol)
+Caused by: NoMethodError (undefined method `id' for an instance of Symbol)
+
+Information for: ActionView::Template::Error (undefined method `id' for an instance of Symbol):
+    22:         <td class="py-2 px-4"><%= book.author %></td>
+    23:         <td class="py-2 px-4"><%= book.count %></td>
+    24:         <td class="py-2 px-4">
+    25:           <%= link_to 'Выдать', admin_dashboard_all_books_path(:book.id), class: 'text-blue-600 hover:underline' %>
+    26:           <%#link_to 'Удалить', book, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'ml-2 text-red-600 hover:underline' %>
+    27:         </td>
+    28:       </tr>
+  
+app/views/books/index.html.erb:25
+app/views/books/index.html.erb:19
+
+Information for cause: NoMethodError (undefined method `id' for an instance of Symbol):
+  
+app/views/books/index.html.erb:25
+app/views/books/index.html.erb:19
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-12-22 19:43:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 19:43:17 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 19:43:19 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 7.2ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:43:20 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:43:22 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:43:30 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:54:21 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (82.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 86.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 87.8ms | GC: 0.0ms)
+Completed 200 OK in 343ms (Views: 4.2ms | ActiveRecord: 86.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/operations/1/give_out_book" for 127.0.0.1 at 2024-12-22 19:54:23 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/operations/1/give_out_book" for 127.0.0.1 at 2024-12-22 19:54:33 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 272ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/operations/1/give_out_book" for 127.0.0.1 at 2024-12-22 19:58:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/operations/1/give_out_book"):
+  
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 19:59:04 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 10.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | GC: 0.0ms)
+Completed 200 OK in 268ms (Views: 7.9ms | ActiveRecord: 6.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 19:59:32 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:15:00 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 359ms (Views: 6.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:15:08 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 11.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/operations_controller.rb:11:in `create'
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:16:16 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 266ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:16:20 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 5.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/operations_controller.rb:12:in `create'
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:20:28 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 276ms (Views: 6.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:20:29 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"new", :book_id=>nil, :controller=>"operations"}, missing required keys: [:book_id]):
+  
+app/controllers/operations_controller.rb:14:in `create'
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 20:22:16 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | GC: 0.0ms)
+Completed 200 OK in 270ms (Views: 9.2ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books.1" for 127.0.0.1 at 2024-12-22 20:22:16 +0300
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 3.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:22:18 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:22:21 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"new", :book_id=>nil, :controller=>"operations"}, missing required keys: [:book_id]):
+  
+app/controllers/operations_controller.rb:14:in `create'
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:23:57 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 275ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:24:02 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `create'
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `create'
+  [1m[36mOperation Create (3.5ms)[0m  [1m[32mINSERT INTO "operations" ("user", "book", "took", "returned") VALUES (1, 1, '2024-12-22 17:24:02.464967', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 279ms (ActiveRecord: 13.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:24:02 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 5.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:24:07 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 2.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 20:24:29 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:24:30 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:24:31 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/operations_controller.rb:18:in `create'
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:24:35 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 3.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:24:35 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:01 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:02 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 264ms (ActiveRecord: 3.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:02 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:03 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 258ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:04 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:36 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "count" = 99, "updated_at" = '2024-12-22 17:25:36.757181' WHERE "books"."id" = 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+  [1m[36mOperation Create (1.5ms)[0m  [1m[32mINSERT INTO "operations" ("user", "book", "took", "returned") VALUES (1, 1, '2024-12-22 17:25:36.752644', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 276ms (ActiveRecord: 9.9ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:25:36 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 7.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:25:41 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 20:25:49 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:27:27 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.2ms)
+Completed 200 OK in 294ms (Views: 9.1ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:27:29 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:27:53 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 263ms (Views: 3.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:27:56 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:29:23 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 8.1ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:29:26 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 3.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:29:26 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:29:29 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:29:30 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-12-22 20:29:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | GC: 0.0ms)
+Completed 200 OK in 561ms (Views: 26.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-94f39faf.css" for 127.0.0.1 at 2024-12-22 20:29:43 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-22 20:29:43 +0300
+Started GET "/register" for 127.0.0.1 at 2024-12-22 20:29:44 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 265ms (Views: 10.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-22 20:29:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-22 20:29:52 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '123@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 580ms (ActiveRecord: 12.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-22 20:29:53 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 271ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:29:55 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 263ms (Views: 7.3ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:29:58 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:29:58 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 273ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-22 20:29:59 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:31:16 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 6.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | GC: 0.0ms)
+Completed 200 OK in 286ms (Views: 19.0ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-137c7d0a.css" for 127.0.0.1 at 2024-12-22 20:31:16 +0300
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:31:27 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:28 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 270ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:33 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 275ms (ActiveRecord: 3.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:36 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 263ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:40 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 254ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:41 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 252ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:41 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 257ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:41 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 256ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:42 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 267ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:43 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:47 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:53 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 253ms (ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:54 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 251ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:54 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 253ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:58 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '12345@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 256ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:59 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:59 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 254ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:31:59 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:32:06 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 262ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:32:07 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 265ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:32:28 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 264ms (ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:32:40 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 3.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-137c7d0a.css" for 127.0.0.1 at 2024-12-22 20:32:40 +0300
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:32:41 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:32:48 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+No template found for OperationsController#create, rendering head :no_content
+Completed 204 No Content in 264ms (ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:33:04 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 289ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-22 20:33:08 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:10:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '1234@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "count" = 0, "updated_at" = '2024-12-22 17:33:09.149583' WHERE "books"."id" = 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+  [1m[36mOperation Create (1.9ms)[0m  [1m[32mINSERT INTO "operations" ("user", "book", "took", "returned") VALUES (1, 1, '2024-12-22 17:33:09.144055', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:25:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 282ms (ActiveRecord: 13.0ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-22 20:33:09 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 5.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
