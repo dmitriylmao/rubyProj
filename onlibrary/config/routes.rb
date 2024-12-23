@@ -14,30 +14,28 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
+  # user funcs
   get "/user_dashboard", to: "user_dashboard#index"
+  get "/user_dashboard/borrowed_books", to: "user_dashboard#show"
+  get "/user_dashboard/all_books", to: "user_dashboard#all_books"
+  get "/user_dashboard/history", to: "user_dashboard#history"
 
+  # admin funcs
   get "/admin_dashboard", to: "admin_dashboard#index"
-
+  # adding new book
   get "/admin_dashboard/new_book", to: "books#new"
   post "/admin_dashboard/new_book", to: "books#create"
-
+  # getting all books
   get "/admin_dashboard/all_books", to: "books#index"
-
-  #get "/admin_dashboard/user", to: "users#show"
+  # giving out book
   get "/admin_dashboard/give_out_book/:book_id", to: "operations#new", as: "admin_dashboard_give_out_book"
   post "/admin_dashboard/give_out_book/:book_id", to: "operations#create"
-
+  # taking book back
   get "/admin_dashboard/take_book/:book_id", to: "operations#show", as: "admin_dashboard_take_book"
-  #post "/admin_dashboard/take_book/:book_id", to: "operations#index"
-
   get "/admin_dashboard/take_book/:book_id/:user_id", to: "operations#index", as: "admin_dashboard_take_book_user"
   patch "/admin_dashboard/take_book/:book_id/:user_id", to: "operations#update"
 
-  #get "/admin_dashboard/user_borrowed_books/:user_id", to: "books#show", as: "admin_dashboard_user_borrowed_book"
 
-
-  #post "/admin_dashboard/user", to: "users#create"
-  #get "/admin_dashboard/user/:id", to: "operations#new"
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
