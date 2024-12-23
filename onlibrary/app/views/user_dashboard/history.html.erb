@@ -1,21 +1,23 @@
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <h1 class="text-2xl font-bold mb-6">Взятые книги</h1>
+  <h1 class="text-2xl font-bold mb-6">Книги, которые Вы уже вернули</h1>
 
   <div class="w-full max-w-md">
     <table class="min-w-full bg-white border border-gray-300">
-      <thead>
+     <thead>
       <tr class="bg-gray-200">
         <th class="py-2 px-4 border-b">Название книги</th>
         <th class="py-2 px-4 border-b">Автор</th>
         <th class="py-2 px-4 border-b">Дата взятия</th>
+        <th class="py-2 px-4 border-b">Дата возвращения</th>
       </tr>
       </thead>
       <tbody>
-      <% @borrowed_books.each do |book| %>
+      <% @operations.each do |operation| %>
         <tr class="hover:bg-gray-100">
-          <td class="py-2 px-4 border-b"><%= book.name %></td>
-          <td class="py-2 px-4 border-b"><%= book.author %></td>
-          <td class="py-2 px-4 border-b"><%= Operation.order(returned: :desc).find_by_book(book.id).took.strftime("%d-%m-%Y") %></td>
+          <td class="py-2 px-4 border-b"><%= Book.find_by_id(operation.book).name %></td>
+          <td class="py-2 px-4 border-b"><%= Book.find_by_id(operation.book).author %></td>
+          <td class="py-2 px-4 border-b"><%= operation.took.strftime("%d-%m-%Y") %></td>
+          <td class="py-2 px-4 border-b"><%= operation.returned.strftime("%d-%m-%Y") %></td>
         </tr>
       <% end %>
       </tbody>
@@ -24,5 +26,5 @@
 
   <div class="mt-6">
     <%= button_to 'Назад', user_dashboard_path, method: :get, class: 'px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600' %>
-  </div>
+ </div>
 </div>

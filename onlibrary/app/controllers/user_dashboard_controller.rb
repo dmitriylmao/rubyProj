@@ -5,8 +5,20 @@ class UserDashboardController < ApplicationController
   end
 
   def show
-    #TODO:
-    # вернуть список @borrow_books
+    operations = Operation.where(user: session[:current_user], returned: nil)
+    book_ids = operations.pluck(:book)
+    @borrowed_books = Book.where(id: book_ids)
+  end
+
+  def all_books
+    @books = Book.where("count > ?", 0)
+  end
+
+  def history
+    operations = Operation.where(user: session[:current_user]).where.not(returned: nil)
+    book_ids = operations.pluck(:book)
+    @returned_books = Book.where(id: book_ids)
+    @operations = Operation.where(user: session[:current_user]).where.not(returned: nil).order(returned: :desc)
   end
 
 end
