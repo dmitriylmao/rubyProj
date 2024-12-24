@@ -11,7 +11,7 @@ class BooksController < ApplicationController
   def create
     found_book = Book.find_by_name(book_params[:name])
     if found_book.author == book_params[:author]
-      found_book.count += book_params[:count]
+      found_book.count += book_params[:count].to_i
       if found_book.save
         redirect_to admin_dashboard_path
       else
