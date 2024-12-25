@@ -18,4 +18,11 @@ FactoryBot.define do
     author { "author" }
     count { 100 }
   end
+
+  factory :operation do
+    association :user, factory: :user
+    association :book, factory: :book
+    took { Time.zone.now }
+    returned { Time.zone.tomorrow }
+  end
 end
