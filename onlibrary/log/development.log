@@ -11214,3 +11214,1728 @@ Completed 200 OK in 264ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cach
   [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'cb34b597acc91c8a83e26168de4522eb9be5f836', '2024-12-25 00:09:42.249277', '2024-12-25 00:09:42.249278') RETURNING "key" /*application='Onlibrary'*/[0m
 [dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (5713.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "onlibrary_development" /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (134.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "onlibrary_development" /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (128.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "onlibrary_test" /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (221.7ms)[0m  [1m[35mCREATE DATABASE "onlibrary_development" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (346.9ms)[0m  [1m[35mCREATE DATABASE "onlibrary_test" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+  [1m[35mSQL (98.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "count" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "operations" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "operations" ("id" bigserial primary key, "user" bigint NOT NULL, "book" bigint NOT NULL, "took" timestamp NOT NULL, "returned" timestamp) /*application='Onlibrary'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_operations_on_book_and_user_where_returned_nil" ON "operations" ("book", "user") WHERE (returned IS NULL) /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "role" character varying) /*application='Onlibrary'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='Onlibrary'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username") /*application='Onlibrary'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241222210935) /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241222210446),
+(20241222135104),
+(20241222133613),
+(20241222104326),
+(20241217224518); /*application='Onlibrary'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 00:48:19.204438', '2024-12-25 00:48:19.204439') RETURNING "key" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'cb34b597acc91c8a83e26168de4522eb9be5f836', '2024-12-25 00:48:19.209418', '2024-12-25 00:48:19.209419') RETURNING "key" /*application='Onlibrary'*/[0m
+  [1m[35mSQL (201.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "count" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "operations" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "operations" ("id" bigserial primary key, "user" bigint NOT NULL, "book" bigint NOT NULL, "took" timestamp NOT NULL, "returned" timestamp) /*application='Onlibrary'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_operations_on_book_and_user_where_returned_nil" ON "operations" ("book", "user") WHERE (returned IS NULL) /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Onlibrary'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "role" character varying) /*application='Onlibrary'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='Onlibrary'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username") /*application='Onlibrary'*/[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241222210935) /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241222210446),
+(20241222135104),
+(20241222133613),
+(20241222104326),
+(20241217224518); /*application='Onlibrary'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 00:48:19.461885', '2024-12-25 00:48:19.461886') RETURNING "key" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-25 00:48:19.465441' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'cb34b597acc91c8a83e26168de4522eb9be5f836', '2024-12-25 00:48:19.468392', '2024-12-25 00:48:19.468394') RETURNING "key" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to CreateBooks (20241222133613)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE "books" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222133613' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to CreateBooks (20241222133613)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "count" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222133613') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to CreateOperation (20241222135104)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE "operations" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222135104' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to CreateOperation (20241222135104)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "operations" ("id" bigserial primary key, "user_id" bigint, "book_id" bigint, "took" timestamp NOT NULL, "returned" timestamp) /*application='Onlibrary'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_operations_on_user_id" ON "operations" ("user_id") /*application='Onlibrary'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_operations_on_book_id" ON "operations" ("book_id") /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222135104') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_operations_on_book_and_user" ON "operations" ("book_id", "user_id") /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222210935' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX  "index_operations_on_book_and_user" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222210935') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_operations_on_book_and_user" ON "operations" ("book_id", "user_id") /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222210935' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to RemoveIndexFromOperations (20241222210935)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX  "index_operations_on_book_and_user" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222210935') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to CreateOperation (20241222135104)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE "operations" /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222135104' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to CreateOperation (20241222135104)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "operations" ("id" bigserial primary key, "user_id" bigint, "book_id" bigint, "took" timestamp NOT NULL, "returned" timestamp) /*application='Onlibrary'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_operations_on_user_id" ON "operations" ("user_id") /*application='Onlibrary'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_operations_on_book_id" ON "operations" ("book_id") /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222135104') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP INDEX  "index_operations_on_book_and_user_where_returned_nil" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP INDEX  "index_operations_on_book_and_user_where_returned_nil" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP INDEX  "index_operations_on_book_and_user_where_returned_nil" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241222210446' /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+Migrating to AddUniqueIndexToOperations (20241222210446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_operations_on_book_and_user_where_returned_nil" ON "operations" ("book_id", "user_id") WHERE returned IS NULL /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241222210446') RETURNING "version" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-12-25 04:29:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | GC: 0.0ms)
+Completed 200 OK in 570ms (Views: 22.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-07c96737.css" for 127.0.0.1 at 2024-12-25 04:29:31 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-25 04:29:31 +0300
+Started GET "/register" for 127.0.0.1 at 2024-12-25 04:29:32 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 9.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'admin' LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Onlibrary'*/[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'admin' LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ('admin', 'admin@admin.com', '$2a$12$EE5Fd.c1vl57tzg4Hbzm7ub0jdyJBHrmqZmRVrrqGYzMhEE8/tjly', '2024-12-25 01:32:58.508720', '2024-12-25 01:32:58.508720', 'admin') RETURNING "id" /*application='Onlibrary'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*application='Onlibrary'*/[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-25 04:34:26 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 269ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 04:34:28 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 271ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 04:34:39 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 560ms (ActiveRecord: 13.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:34:39 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 274ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:36:02 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 288ms (Views: 5.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:36:04 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 271ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:36:20 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"name"=>"Война и мир", "author"=>"Лев Толстой", "count"=>"10"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = 'Война и мир' LIMIT 1 /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  
+NoMethodError (undefined method `author' for nil):
+  
+app/controllers/books_controller.rb:13:in `create'
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:37:42 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 312ms (Views: 30.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:37:47 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"name"=>"Война и мир", "author"=>"Лев Толстой", "count"=>"10"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = 'Война и мир' LIMIT 1 /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mBook Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' LIMIT 1 /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mBook Create (2.1ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ('Война и мир', 'Лев Толстой', 10, '2024-12-25 01:37:47.581625', '2024-12-25 01:37:47.581625') RETURNING "id" /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 263ms (ActiveRecord: 7.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:37:47 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 266ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:37:49 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:37:51 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:37:51 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 34.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `arity' for an instance of Symbol)
+Caused by: NoMethodError (undefined method `arity' for an instance of Symbol)
+
+Information for: ActionView::Template::Error (undefined method `arity' for an instance of Symbol):
+    31:           <% else %>
+    32:             <span class="text-gray-400">Выдать</span>
+    33:           <% end %>
+    34:           <% if Operation.where(book_id: book.id, returned: nil).count != 0%>
+    35:           <%= link_to 'Принять', admin_dashboard_take_book_path(book.id), class: 'ml-2 text-red-600 hover:underline' %>
+    36:           <% else %>
+    37:             <span class="text-gray-400">Принять</span>
+  
+app/models/operation.rb:4:in `<class:Operation>'
+app/models/operation.rb:3:in `<main>'
+app/views/books/index.html.erb:34
+app/views/books/index.html.erb:22
+
+Information for cause: NoMethodError (undefined method `arity' for an instance of Symbol):
+  
+app/models/operation.rb:4:in `<class:Operation>'
+app/models/operation.rb:3:in `<main>'
+app/views/books/index.html.erb:34
+app/views/books/index.html.erb:22
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:39:42 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:39:44 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 66.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `arity' for an instance of Symbol)
+Caused by: NoMethodError (undefined method `arity' for an instance of Symbol)
+
+Information for: ActionView::Template::Error (undefined method `arity' for an instance of Symbol):
+    31:           <% else %>
+    32:             <span class="text-gray-400">Выдать</span>
+    33:           <% end %>
+    34:           <% if Operation.where(book_id: book.id, returned: nil).count != 0%>
+    35:           <%= link_to 'Принять', admin_dashboard_take_book_path(book.id), class: 'ml-2 text-red-600 hover:underline' %>
+    36:           <% else %>
+    37:             <span class="text-gray-400">Принять</span>
+  
+app/models/operation.rb:4:in `<class:Operation>'
+app/models/operation.rb:3:in `<main>'
+app/views/books/index.html.erb:34
+app/views/books/index.html.erb:22
+
+Information for cause: NoMethodError (undefined method `arity' for an instance of Symbol):
+  
+app/models/operation.rb:4:in `<class:Operation>'
+app/models/operation.rb:3:in `<main>'
+app/views/books/index.html.erb:34
+app/views/books/index.html.erb:22
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:41:10 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:41:11 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.0ms)
+Completed 200 OK in 263ms (Views: 13.3ms | ActiveRecord: 4.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:41:15 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 295ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:41:28 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 277ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:41:29 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:41:35 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.0ms)
+Completed 200 OK in 263ms (Views: 6.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:41:37 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-25 04:41:38 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 255ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 04:41:39 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-25 04:41:40 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 285ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-12-25 04:41:53 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'user' LIMIT 1 /*action='create',application='Onlibrary',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ('user', 'user@user.com', '$2a$12$pP3pla0nRNhySRjEfyR.K.RvapcqGwqXcaV42TIktJ.5b8z1AbYCS', '2024-12-25 01:41:54.022556', '2024-12-25 01:41:54.022556', 'user') RETURNING "id" /*action='create',application='Onlibrary',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://127.0.0.1:3000/user_dashboard
+Completed 302 Found in 473ms (ActiveRecord: 5.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:41:54 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 273ms (Views: 4.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2024-12-25 04:41:56 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/show.html.erb within layouts/application
+  Rendered user_dashboard/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 1.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:41:57 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 1.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:41:59 +0300
+Processing by UserDashboardController#all_books as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/all_books.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (count > 0) /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/all_books.html.erb:17
+  Rendered user_dashboard/all_books.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 3.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/history" for 127.0.0.1 at 2024-12-25 04:42:03 +0300
+Processing by UserDashboardController#history as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:19:in `history'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/history.html.erb within layouts/application
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL ORDER BY "operations"."returned" DESC /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:15
+  Rendered user_dashboard/history.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 268ms (Views: 3.0ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-25 04:42:07 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 04:42:07 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 247ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-25 04:42:08 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 04:42:09 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 274ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 04:42:20 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 450ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:42:20 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:42:24 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:42:25 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:42:26 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:42:27 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:42:32 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (0.7ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 1, '2024-12-25 01:42:32.809267', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "count" = 9, "updated_at" = '2024-12-25 01:42:32.937945' WHERE "books"."id" = 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 384ms (ActiveRecord: 8.4ms (7 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:42:32 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 4.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:42:34 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 3.2ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:42:44 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:42:45 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.4ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 2.5ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:42:45 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 244ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:42:55 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 4.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-07c96737.css" for 127.0.0.1 at 2024-12-25 04:42:55 +0300
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:42:57 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:43:00 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 247ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-25 04:43:01 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 246ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 04:43:01 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-25 04:43:02 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 04:43:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 04:43:12 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/user_dashboard
+Completed 302 Found in 446ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:43:13 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 2.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:43:14 +0300
+Processing by UserDashboardController#all_books as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/all_books.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (count > 0) /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/all_books.html.erb:17
+  Rendered user_dashboard/all_books.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 263ms (Views: 2.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2024-12-25 04:43:16 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/show.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/show.html.erb:14
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."book_id" = 1 ORDER BY "operations"."returned" DESC LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/show.html.erb:18
+  Rendered user_dashboard/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 4.3ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:21 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:24 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (4.6ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 1, '2024-12-25 01:43:24.834965', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/give_out_book/1
+Completed 302 Found in 263ms (ActiveRecord: 7.0ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:24 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 248ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:43:33 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:43:34 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 2.4ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:36 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:43:37 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 2.7ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:43:39 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 270ms (Views: 4.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:43:40 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.8ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:43:40.411068' WHERE "operations"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "count" = 10, "updated_at" = '2024-12-25 01:43:40.423093' WHERE "books"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 271ms (ActiveRecord: 9.2ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:43:40 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 4.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:44 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:43:48 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (0.1ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 1, '2024-12-25 01:43:49.230258', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "count" = 9, "updated_at" = '2024-12-25 01:43:49.245534' WHERE "books"."id" = 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 276ms (ActiveRecord: 6.6ms (7 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:43:49 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 4.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:43:50 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 266ms (Views: 2.5ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:43:51 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 272ms (Views: 2.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:43:58 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.6ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:43:58.835564' WHERE "operations"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.6ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:43:58.839854' WHERE "operations"."id" = 3 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (0.1ms)[0m  [1m[33mUPDATE "books" SET "count" = 10, "updated_at" = '2024-12-25 01:43:58.847379' WHERE "books"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 281ms (ActiveRecord: 6.5ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:43:58 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:44:02 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 1.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/history" for 127.0.0.1 at 2024-12-25 04:44:04 +0300
+Processing by UserDashboardController#history as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:19:in `history'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/history.html.erb within layouts/application
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL ORDER BY "operations"."returned" DESC /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:15
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  Rendered user_dashboard/history.html.erb within layouts/application (Duration: 10.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 10.7ms | ActiveRecord: 0.9ms (9 queries, 5 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:44:06 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 247ms (Views: 1.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2024-12-25 04:44:06 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/show.html.erb within layouts/application
+  Rendered user_dashboard/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 1.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-25 04:44:07 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 250ms (Views: 1.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:46:14 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 5.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:46:23 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (0.1ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 1, '2024-12-25 01:46:23.608936', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "count" = 9, "updated_at" = '2024-12-25 01:46:23.626710' WHERE "books"."id" = 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 291ms (ActiveRecord: 11.4ms (7 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:46:23 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 7.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-25 04:46:35 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 3.3ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:46:36 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 2.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:46:53 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 284ms (Views: 5.8ms | ActiveRecord: 5.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-25 04:46:55 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.7ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:46:55.434477' WHERE "operations"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.6ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:46:55.440659' WHERE "operations"."id" = 3 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (1.7ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-25 01:46:55.445050' WHERE "operations"."id" = 4 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (0.1ms)[0m  [1m[33mUPDATE "books" SET "count" = 10, "updated_at" = '2024-12-25 01:46:55.453577' WHERE "books"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:3000/admin_dashboard/all_books
+Completed 302 Found in 308ms (ActiveRecord: 15.1ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:46:55 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 7.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:47:14 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:47:15 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:47:16 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:47:17 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-25 04:47:18 +0300
+Processing by BooksController#new as HTML
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:47:18 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 258ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 254ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-25 04:47:20 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:22
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:34
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-25 04:47:22 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/history" for 127.0.0.1 at 2024-12-25 04:48:01 +0300
+Processing by UserDashboardController#history as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:19:in `history'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/history.html.erb within layouts/application
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NOT NULL ORDER BY "operations"."returned" DESC /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:15
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  Rendered user_dashboard/history.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 274ms (Views: 14.7ms | ActiveRecord: 1.1ms (12 queries, 8 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2024-12-25 04:48:06 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.2ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/show.html.erb within layouts/application
+  Rendered user_dashboard/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 1.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-25 04:48:08 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 248ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-25 04:48:10 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 247ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 04:48:10 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 253ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

@@ -7,8 +7,8 @@ class OperationsController < ApplicationController
   end
 
   def show
-    operations = Operation.where(book: params[:book_id], returned: nil)
-    user_ids = operations.pluck(:user)
+    operations = Operation.where(book_id: params[:book_id], returned: nil)
+    user_ids = operations.pluck(:user_id)
     @users = User.where(id: user_ids)
     @book = Book.find_by_id(params[:book_id])
   end
@@ -30,7 +30,7 @@ class OperationsController < ApplicationController
     book.count += 1
 
     # полагаем, что пользователь не может взять две одинаковые книги
-    operations = Operation.where(user: user.id, book: book.id)
+    operations = Operation.where(user_id: user.id, book_id: book.id)
     operations.each do |operation|
       operation.update(returned: Time.zone.now)
     end
@@ -51,8 +51,8 @@ class OperationsController < ApplicationController
     end
 
     operation = Operation.new
-    operation.user = user.id
-    operation.book = book.id
+    operation.user_id = user.id
+    operation.book_id = book.id
     operation.took = Time.zone.now
 
     if book.count > 0
