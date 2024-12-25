@@ -12,4 +12,10 @@ FactoryBot.define do
       password_digest {  BCrypt::Password.create('123456') }
     end
   end
+
+  factory :book do
+    name { "book" }
+    author { "author" }
+    count { 100 }
+  end
 end
