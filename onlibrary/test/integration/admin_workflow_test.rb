@@ -43,21 +43,30 @@ class AdminWorkflowTest < ApplicationSystemTestCase
     assert page.has_content?("200")
   end
 
-  #test "giving out and taking back books" do
-  #register_user
+  test "giving out and taking back books" do
+    register_user
 
-  #admin_login
+    admin_login
 
-  #add_book
-  #visit "admin_dashboard/all_books"
+    visit "admin_dashboard/new_book"
+    @book1 = create(:book)
+    fill_in "Name", with: @book1.name
+    fill_in "Author", with: @book1.author
+    fill_in "Count", with: @book1.count
+    click_on "Добавить книгу"
 
-  #click_on "Выдать"
-  # assert_current_path "/admin_dashboard/give_out_book/" + @book.id
-  #
-  #fill_in "Email", with: "test@example.com"
-  #click_on "Выдать"
-  #assert_current_path "/admin_dashboard/give_out_book/" + @book.id
-  #end
+
+    assert_current_path "/admin_dashboard"
+    visit "admin_dashboard/all_books"
+    assert_current_path "/admin_dashboard/all_books"
+
+    click_on "Выдать"
+    assert_current_path "/admin_dashboard/give_out_book/" + @book1.id.to_s
+
+    fill_in "Email", with: "test@example.com"
+    click_on "Выдать"
+    assert_current_path "/admin_dashboard/all_books"
+  end
 
   private
   def admin_login
@@ -70,9 +79,9 @@ class AdminWorkflowTest < ApplicationSystemTestCase
   def add_book
     visit "admin_dashboard/new_book"
     @book = build(:book)
-    fill_in "Name", with: book.name
-    fill_in "Author", with: book.author
-    fill_in "Count", with: book.count
+    fill_in "Name", with: @book.name
+    fill_in "Author", with: @book.author
+    fill_in "Count", with: @book.count
     click_on "Добавить книгу"
   end
 
