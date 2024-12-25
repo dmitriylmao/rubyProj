@@ -853,3 +853,587 @@ OperationTest: test_is_valid_when_all_fields_are_filled_in
 ----------------------------------------------------------
 [dotenv] Saved a snapshot of [32mENV[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:20:36.971221"], ["updated_at", "2024-12-25 02:20:36.971221"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:40:57.543949"], ["updated_at", "2024-12-25 02:40:57.543949"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:40:57.735586"], ["updated_at", "2024-12-25 02:40:57.735586"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOperation Create (1.3ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["book_id", 1], ["took", "2024-12-25 02:40:57.737166"], ["returned", "2024-12-26 00:00:00"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:42:15.659273"], ["updated_at", "2024-12-25 02:42:15.659273"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:42:15.851281"], ["updated_at", "2024-12-25 02:42:15.851281"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Create (0.8ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["book_id", 2], ["took", "2024-12-25 02:42:15.852565"], ["returned", "2024-12-26 00:00:00"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:45:22.974961"], ["updated_at", "2024-12-25 02:45:22.974961"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:45:23.166615"], ["updated_at", "2024-12-25 02:45:23.166615"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 3], ["book_id", 3], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["book_id", 3], ["took", "2024-12-25 02:45:23.167885"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 3], ["book_id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:46:28.969013"], ["updated_at", "2024-12-25 02:46:28.969013"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:46:29.225050"], ["updated_at", "2024-12-25 02:46:29.225050"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 4], ["book_id", 4], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.5ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["book_id", 4], ["took", "2024-12-25 02:46:29.239176"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 4], ["book_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 4], ["book_id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:47:26.085131"], ["updated_at", "2024-12-25 02:47:26.085131"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:47:26.277037"], ["updated_at", "2024-12-25 02:47:26.277037"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 5], ["book_id", 5], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["book_id", 5], ["took", "2024-12-25 02:47:26.278452"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 5], ["book_id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 5], ["book_id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:47:48.104362"], ["updated_at", "2024-12-25 02:47:48.104362"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:47:48.369422"], ["updated_at", "2024-12-25 02:47:48.369422"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 6], ["book_id", 6], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.5ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["book_id", 6], ["took", "2024-12-25 02:47:48.383211"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 6], ["book_id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 6], ["book_id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:49:43.192232"], ["updated_at", "2024-12-25 02:49:43.192232"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:49:43.459144"], ["updated_at", "2024-12-25 02:49:43.459144"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 7], ["book_id", 7], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.5ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["book_id", 7], ["took", "2024-12-25 02:49:43.473644"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 7], ["book_id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 7], ["book_id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:51:48.063753"], ["updated_at", "2024-12-25 02:51:48.063753"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:51:48.328243"], ["updated_at", "2024-12-25 02:51:48.328243"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 8], ["book_id", 8], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["book_id", 8], ["took", "2024-12-25 02:51:48.339006"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 8], ["book_id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 8], ["book_id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:52:27.586428"], ["updated_at", "2024-12-25 02:52:27.586428"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:52:27.778056"], ["updated_at", "2024-12-25 02:52:27.778056"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 9], ["book_id", 9], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 9], ["book_id", 9], ["took", "2024-12-25 02:52:27.779526"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 9], ["book_id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 9], ["book_id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:53:47.534033"], ["updated_at", "2024-12-25 02:53:47.534033"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:53:47.798720"], ["updated_at", "2024-12-25 02:53:47.798720"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 10], ["book_id", 10], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["book_id", 10], ["took", "2024-12-25 02:53:47.809443"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 10], ["book_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 10], ["book_id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:54:18.571908"], ["updated_at", "2024-12-25 02:54:18.571908"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:54:18.764718"], ["updated_at", "2024-12-25 02:54:18.764718"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Create (0.9ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["book_id", 11], ["took", "2024-12-25 02:54:18.766023"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 02:55:33.408580"], ["updated_at", "2024-12-25 02:55:33.408580"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 02:55:33.677002"], ["updated_at", "2024-12-25 02:55:33.677002"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 12], ["book_id", 12], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.5ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 12], ["book_id", 12], ["took", "2024-12-25 02:55:33.691017"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 12], ["book_id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 12], ["book_id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-25 03:03:16.501279"], ["updated_at", "2024-12-25 03:03:16.501279"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-25 03:03:16.760391"], ["updated_at", "2024-12-25 03:03:16.760391"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 13], ["book_id", 13], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 13], ["book_id", 13], ["took", "2024-12-25 03:03:16.771165"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 13], ["book_id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 13], ["book_id", 13], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
