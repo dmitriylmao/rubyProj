@@ -12,7 +12,7 @@ class Operation < ActiveRecord::Base
 
   private
   def returned_must_be_after_took
-    if returned.present? && returned.is_a?(ActiveSupport::TimeWithZone) && returned < took
+    if returned.present? && returned.is_a?(ActiveSupport::TimeWithZone) && took.present? && returned < took
       errors.add(:returned, "должна быть не меньше, чем дата в took")
     end
   end
