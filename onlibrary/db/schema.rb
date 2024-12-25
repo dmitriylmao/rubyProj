@@ -23,11 +23,13 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_22_210935) do
   end
 
   create_table "operations", force: :cascade do |t|
-    t.bigint "user", null: false
-    t.bigint "book", null: false
+    t.bigint "user_id"
+    t.bigint "book_id"
     t.datetime "took", precision: nil, null: false
     t.datetime "returned", precision: nil
-    t.index ["book", "user"], name: "index_operations_on_book_and_user_where_returned_nil", unique: true, where: "(returned IS NULL)"
+    t.index ["book_id", "user_id"], name: "index_operations_on_book_and_user_where_returned_nil", unique: true, where: "(returned IS NULL)"
+    t.index ["book_id"], name: "index_operations_on_book_id"
+    t.index ["user_id"], name: "index_operations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,4 +42,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_22_210935) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
+
+  add_foreign_key "operations", "books"
+  add_foreign_key "operations", "users"
 end

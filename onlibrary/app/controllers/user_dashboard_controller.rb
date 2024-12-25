@@ -5,8 +5,8 @@ class UserDashboardController < ApplicationController
   end
 
   def show
-    operations = Operation.where(user: session[:current_user], returned: nil)
-    book_ids = operations.pluck(:book)
+    operations = Operation.where(user_id: session[:current_user], returned: nil)
+    book_ids = operations.pluck(:book_id)
     @borrowed_books = Book.where(id: book_ids)
   end
 
@@ -15,10 +15,10 @@ class UserDashboardController < ApplicationController
   end
 
   def history
-    operations = Operation.where(user: session[:current_user]).where.not(returned: nil)
-    book_ids = operations.pluck(:book)
+    operations = Operation.where(user_id: session[:current_user]).where.not(returned: nil)
+    book_ids = operations.pluck(:book_id)
     @returned_books = Book.where(id: book_ids)
-    @operations = Operation.where(user: session[:current_user]).where.not(returned: nil).order(returned: :desc)
+    @operations = Operation.where(user_id: session[:current_user]).where.not(returned: nil).order(returned: :desc)
   end
 
 end

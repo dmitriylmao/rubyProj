@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
   <h1 class="text-2xl font-bold mb-4">
-    Выдать книгу <%= @book.name %> пользователю <%= @user.username %>
+    Принять книгу <%= @book.name %> у пользователя <%= @user.username %>
   </h1>
 
   <%= form_with(url: admin_dashboard_take_book_user_path(@book.id, @user.id), method: :patch, local: true, class: "mt-4") do |form| %>

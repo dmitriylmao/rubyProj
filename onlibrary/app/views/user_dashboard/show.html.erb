@@ -15,7 +15,7 @@
         <tr class="hover:bg-gray-100">
           <td class="py-2 px-4 border-b"><%= book.name %></td>
           <td class="py-2 px-4 border-b"><%= book.author %></td>
-          <td class="py-2 px-4 border-b"><%= Operation.order(returned: :desc).find_by_book(book.id).took.strftime("%d-%m-%Y") %></td>
+          <td class="py-2 px-4 border-b"><%= Operation.order(returned: :desc).find_by_book_id(book.id).took.strftime("%d-%m-%Y") %></td>
         </tr>
       <% end %>
       </tbody>
