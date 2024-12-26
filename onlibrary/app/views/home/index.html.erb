@@ -5,14 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Домашняя страница библиотеки</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      body {
+          background-image: url('https://masterpiecer-images.s3.yandex.net/5585c86cc3a911ef9e744225dc2fd411:1'); /* Замените на свой URL */
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          font-family: 'Menlo', monospace; /* Общий шрифт для всей страницы */
+          font-size: 1.2rem; /* Увеличил размер шрифта для всего текста*/
+      }
+
+      .content-container {
+          text-align: center;
+          max-width: 80%;
+          padding: 2rem;
+          background: rgba(255, 255, 255, 0.7); /* Белый полупрозрачный фон */
+          border-radius: 0.5rem;
+      }
+
+      .library-title {
+          font-size: 6rem; /* Увеличил размер шрифта */
+          font-weight: bold;
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem; /* Уменьшил отступ снизу, чтобы надпись "Добро пожаловать" была ближе */
+          color: #007bff; /* Синий цвет для заголовка */
+      }
+
+      .welcome-text {
+          font-size: 1.5rem; /* Размер шрифта как было */
+          font-weight: bold; /* Жирный шрифт, как у заголовка */
+          letter-spacing: 0.2rem; /* Отступ между буквами, как у заголовка */
+          text-transform: uppercase;  /* Преобразование в верхний регистр, как у заголовка */
+          margin-bottom: 2rem; /* Отступ снизу */
+          color: #007bff; /* Синий цвет, как у заголовка */
+      }
+
+
+      .login-button {
+          background-color: #ff9800; /* Оранжевый цвет для кнопки */
+          color: #0180ff; /* Белый цвет для текста на кнопке */
+          font-weight: bold;
+          padding: 1.5rem 3rem; /* Увеличил отступы */
+          font-size: 1.3rem; /* Увеличил размер текста */
+          border-radius: 0.5rem;
+          display: inline-block;
+          text-decoration: none;
+          margin-bottom: 1rem;
+          transition: background-color 0.3s ease;
+      }
+      .login-button:hover {
+          background-color: #e68a00; /* Более тёмный оранжевый цвет при наведении */
+      }
+
+      .register-button {
+          color: #0055d4; /* Голубой цвет для ссылки */
+          font-size: 1.3rem; /* Увеличил размер текста */
+          text-decoration: none;
+          transition: color 0.3s ease, text-decoration 0.3s ease; /* Добавил transition для text-decoration */
+      }
+
+      .register-button:hover {
+          color: #014c75;
+          text-decoration: underline; /* Добавил подчеркивание при наведении */
+      }
+
+      @media (max-width: 768px) {
+          .library-title {
+              font-size: 4rem; /* Уменьшил размер шрифта для экрана меньше 768px */
+          }
+      }
+  </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
-<div class="bg-white p-8 rounded-lg shadow-md text-center">
-  <h1 class="text-3xl font-semibold mb-4">Добро пожаловать в библиотеку!</h1>
-  <p class="mb-6 text-gray-700">Исследуйте мир литературы и знаний.</p>
-  <a href="/register" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Регистрация</a>
+<body>
+<div class="content-container">
+  <h1 class="library-title">Добро пожаловать в библиотеку!</h1>
+  <p class="welcome-text">Исследуйте мир литературы и знаний.</p>
+  <a href="/login" class="login-button">Войти</a><br>
+  <a href="/register" class="register-button">Регистрация</a>
 </div>
-
 </body>
 </html>
