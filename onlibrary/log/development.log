@@ -15352,3 +15352,158 @@ Processing by AdminDashboardController#index as HTML
 Completed 200 OK in 206ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+  [1m[35m (331.4ms)[0m  [1m[35mCREATE DATABASE "onlibrary_development" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+  [1m[35m (230.2ms)[0m  [1m[35mCREATE DATABASE "onlibrary_development" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (175.1ms)[0m  [1m[35mCREATE DATABASE "onlibrary_development" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Onlibrary'*/[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE DATABASE "onlibrary_test" ENCODING = 'unicode' /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Onlibrary'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(940596424402192635) /*application='Onlibrary'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-12-28 18:17:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | GC: 0.0ms)
+Completed 200 OK in 1494ms (Views: 84.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-28 18:17:29 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 631ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-28 18:17:32 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 34.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | GC: 0.0ms)
+Completed 200 OK in 679ms (Views: 40.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-28 18:17:34 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 624ms (Views: 7.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-28 18:17:39 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'dimaeleckij2016@gmail.com' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/user_dashboard
+Completed 302 Found in 1045ms (ActiveRecord: 21.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-28 18:17:40 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 635ms (Views: 10.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-28 18:18:13 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | GC: 0.0ms)
+Completed 200 OK in 698ms (Views: 30.2ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/assets/application-1a2dbdc0.css" for 127.0.0.1 at 2024-12-28 18:18:14 +0300
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2024-12-28 18:18:22 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (2.5ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/show.html.erb within layouts/application
+  Rendered user_dashboard/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 671ms (Views: 3.4ms | ActiveRecord: 5.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/history" for 127.0.0.1 at 2024-12-28 18:18:30 +0300
+Processing by UserDashboardController#history as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mOperation Pluck (0.3ms)[0m  [1m[34mSELECT "operations"."book_id" FROM "operations" WHERE "operations"."user_id" = 1 AND "operations"."returned" IS NOT NULL /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/user_dashboard_controller.rb:19:in `history'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/history.html.erb within layouts/application
+  [1m[36mOperation Load (0.7ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 1 AND "operations"."returned" IS NOT NULL ORDER BY "operations"."returned" DESC /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:15
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='history',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:17
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1[0m
+  ↳ app/views/user_dashboard/history.html.erb:18
+  Rendered user_dashboard/history.html.erb within layouts/application (Duration: 59.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | GC: 0.0ms)
+Completed 200 OK in 686ms (Views: 56.1ms | ActiveRecord: 6.4ms (6 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-28 18:18:31 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 621ms (Views: 3.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/all_books" for 127.0.0.1 at 2024-12-28 18:18:32 +0300
+Processing by UserDashboardController#all_books as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/all_books.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (count > 0) /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/views/user_dashboard/all_books.html.erb:17
+  Rendered user_dashboard/all_books.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 630ms (Views: 4.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-28 18:18:34 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 632ms (Views: 2.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
