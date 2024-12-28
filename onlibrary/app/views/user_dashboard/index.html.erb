@@ -1,18 +1,16 @@
 <div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-teal-200 to-green-100 relative">
-  <!-- Заголовок -->
+
   <h1 class="text-6xl font-extrabold text-gray-700 mb-12 drop-shadow-lg font-'Montserrat'">
     Управление
   </h1>
 
-  <!-- Горизонтальные кнопки -->
   <div class="grid grid-cols-4 gap-6 w-full max-w-4xl px-4">
     <%= button_to 'Взятые книги', user_dashboard_borrowed_books_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-teal-500 to-cyan-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
-    <%= button_to 'Каталог книг', user_dashboard_all_books_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-indigo-500 to-cyan-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
+    <%= button_to 'Каталог', user_dashboard_all_books_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-indigo-500 to-cyan-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
     <%= button_to 'История', user_dashboard_history_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-amber-500 to-amber-200 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
     <%= button_to 'Выход', logout_path, method: :delete, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-rose-500 to-rose-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
   </div>
 
-  <!-- Дополнительный элемент -->
   <div class="absolute bottom-4 text-center text-lg text-gray-700 font-'Montserrat' animate-bounce">
     Погрузитесь в мир книг 📚
   </div>
