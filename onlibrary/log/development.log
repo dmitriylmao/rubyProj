@@ -19629,3 +19629,2380 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 259ms (Views: 39.7ms | ActiveRecord: 6.4ms (16 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:03:35 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 36.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | GC: 0.0ms)
+Completed 200 OK in 248ms (Views: 33.1ms | ActiveRecord: 5.2ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2024-12-27 04:03:37 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 217ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:03:38 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 235ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:04:47 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 222ms (Views: 7.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:04:57 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать", "book_id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2005@mail' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard/give_out_book/3
+Completed 302 Found in 249ms (ActiveRecord: 16.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:04:57 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 220ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:05:50 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 224ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:06:54 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 238ms (Views: 9.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:07:00 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 476ms (Views: 10.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:07:45 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 231ms (Views: 7.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:07:58 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 267ms (Views: 7.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:08:42 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 242ms (Views: 7.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:08:55 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 268ms (Views: 9.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:10:24 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ru">
+3:    <head>
+4:      <meta charset="UTF-8">
+5:      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:      <title>Email Input</title>
+7:      <script src="https://cdn.tailwindcss.com"></script>
+8:      <style>
+9:          .custom-shadow {
+10:              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+11:          }
+12:    
+13:          .custom-focus:focus {
+14:              outline: none;
+15:              box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+16:              border-color: rgba(255, 165, 0, 0.5);
+17:          }
+18:    
+19:          .background-at {
+20:              position: fixed;
+21:              top: 40%;
+22:              left: 50%;
+23:              transform: translate(-50%, -50%);
+24:              font-size: 60rem; /* Увеличили в 2 раза */
+25:              color: rgba(64, 128, 255, 0.1);
+26:              z-index: -1;
+27:              pointer-events: none;
+28:              user-select: none;
+29:          }
+30:    
+31:          .content-wrapper {
+32:              display: flex;
+33:              flex-direction: column;
+34:              align-items: center;
+35:              justify-content: flex-start; /* Изменено на flex-start */
+36:              min-height: 100vh;
+37:              padding-top: 30vh; /*  Сделал отступ больше*/
+38:          }
+39:          .form-wrapper {
+40:              display: flex;
+41:              flex-direction: column;
+42:              align-items: center;
+43:              justify-content: center;
+44:              margin-top: -15vh; /* Поднимаем форму выше*/
+45:          }
+46:      </style>
+47:    </head>
+48:    <body class="bg-white font-sans">
+49:    
+50:    <div class="background-at">@</div>
+51:    
+52:    <div class="content-wrapper">
+53:      <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+54:      <div class="form-wrapper">
+55:        <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+56:          <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+57:            <div class="relative">
+58:              <%= form.email_field :email,
+59:                                   class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+60:                                   placeholder: " " %>
+61:              <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+62:    
+63:            </div>
+64:            <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+65:                class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+66:          <% end %>
+67:        </div>
+68:      </div>
+69:    </div>
+70:    
+71:    </body>
+72:    </html>
+  
+app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+):
+  
+app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-12-27 04:10:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:10:31 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ru">
+3:    <head>
+4:      <meta charset="UTF-8">
+5:      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:      <title>Email Input</title>
+7:      <script src="https://cdn.tailwindcss.com"></script>
+8:      <style>
+9:          .custom-shadow {
+10:              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+11:          }
+12:    
+13:          .custom-focus:focus {
+14:              outline: none;
+15:              box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+16:              border-color: rgba(255, 165, 0, 0.5);
+17:          }
+18:    
+19:          .background-at {
+20:              position: fixed;
+21:              top: 40%;
+22:              left: 50%;
+23:              transform: translate(-50%, -50%);
+24:              font-size: 60rem; /* Увеличили в 2 раза */
+25:              color: rgba(64, 128, 255, 0.1);
+26:              z-index: -1;
+27:              pointer-events: none;
+28:              user-select: none;
+29:          }
+30:    
+31:          .content-wrapper {
+32:              display: flex;
+33:              flex-direction: column;
+34:              align-items: center;
+35:              justify-content: flex-start; /* Изменено на flex-start */
+36:              min-height: 100vh;
+37:              padding-top: 30vh; /*  Сделал отступ больше*/
+38:          }
+39:          .form-wrapper {
+40:              display: flex;
+41:              flex-direction: column;
+42:              align-items: center;
+43:              justify-content: center;
+44:              margin-top: -15vh; /* Поднимаем форму выше*/
+45:          }
+46:      </style>
+47:    </head>
+48:    <body class="bg-white font-sans">
+49:    
+50:    <div class="background-at">@</div>
+51:    
+52:    <div class="content-wrapper">
+53:      <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+54:      <div class="form-wrapper">
+55:        <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+56:          <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+57:            <div class="relative">
+58:              <%= form.email_field :email,
+59:                                   class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+60:                                   placeholder: " " %>
+61:              <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+62:    
+63:            </div>
+64:            <%= form.submit 'Выдать книгу',  /* Переименовали кнопку */
+65:                class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+66:          <% end %>
+67:        </div>
+68:      </div>
+69:    </div>
+70:    
+71:    </body>
+72:    </html>
+  
+app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+):
+  
+app/views/operations/new.html.erb:64: target of repeat operator is not specified: /* Переименовали кнопку */
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:10:56 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу'
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
+
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem; /* Увеличили в 2 раза */
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
+
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start; /* Изменено на flex-start */
+          min-height: 100vh;
+          padding-top: 30vh; /*  Сделал отступ больше*/
+      }
+      .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -15vh; /* Поднимаем форму выше*/
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="form-wrapper">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+      <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+        <div class="relative">
+          <%= form.email_field :email,
+                               class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                               placeholder: " " %>
+          <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+        </div>
+        <%= form.submit 'Выдать книгу'
+            class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ru">
+3:    <head>
+4:      <meta charset="UTF-8">
+5:      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:      <title>Email Input</title>
+7:      <script src="https://cdn.tailwindcss.com"></script>
+8:      <style>
+9:          .custom-shadow {
+10:              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+11:          }
+12:    
+13:          .custom-focus:focus {
+14:              outline: none;
+15:              box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+16:              border-color: rgba(255, 165, 0, 0.5);
+17:          }
+18:    
+19:          .background-at {
+20:              position: fixed;
+21:              top: 40%;
+22:              left: 50%;
+23:              transform: translate(-50%, -50%);
+24:              font-size: 60rem; /* Увеличили в 2 раза */
+25:              color: rgba(64, 128, 255, 0.1);
+26:              z-index: -1;
+27:              pointer-events: none;
+28:              user-select: none;
+29:          }
+30:    
+31:          .content-wrapper {
+32:              display: flex;
+33:              flex-direction: column;
+34:              align-items: center;
+35:              justify-content: flex-start; /* Изменено на flex-start */
+36:              min-height: 100vh;
+37:              padding-top: 30vh; /*  Сделал отступ больше*/
+38:          }
+39:          .form-wrapper {
+40:              display: flex;
+41:              flex-direction: column;
+42:              align-items: center;
+43:              justify-content: center;
+44:              margin-top: -15vh; /* Поднимаем форму выше*/
+45:          }
+46:      </style>
+47:    </head>
+48:    <body class="bg-white font-sans">
+49:    
+50:    <div class="background-at">@</div>
+51:    
+52:    <div class="content-wrapper">
+53:      <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+54:      <div class="form-wrapper">
+55:        <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+56:          <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+57:            <div class="relative">
+58:              <%= form.email_field :email,
+59:                                   class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+60:                                   placeholder: " " %>
+61:              <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+62:    
+63:            </div>
+64:            <%= form.submit 'Выдать книгу'
+65:                class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+66:          <% end %>
+67:        </div>
+68:      </div>
+69:    </div>
+70:    
+71:    </body>
+72:    </html>
+  
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (D:/git/rubyProj/onlibrary/app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+            class: 'w-full bg-orange-500 hover:...
+                 ^
+):
+  
+app/views/operations/new.html.erb:65: syntax error, unexpected ':'
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:11:03 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 261ms (Views: 8.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:12:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 239ms (Views: 8.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-27 04:13:00 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2005@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:5000/user_dashboard
+Completed 302 Found in 452ms (ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-27 04:13:01 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 235ms (Views: 6.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-27 04:13:02 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 220ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-27 04:13:02 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 231ms (Views: 6.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:13:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 229ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-27 04:13:07 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 238ms (Views: 8.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-27 04:13:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 304ms (Views: 13.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:14:36 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 225ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:14:56 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 223ms (Views: 9.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:16:18 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать книгу", "book_id"=>"3"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard/give_out_book/3
+Completed 302 Found in 313ms (ActiveRecord: 5.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:16:18 +0300
+Processing by OperationsController#new as TURBO_STREAM
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 215ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:16:20 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 52.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | GC: 0.0ms)
+Completed 200 OK in 273ms (Views: 46.8ms | ActiveRecord: 8.8ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:16:58 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 232ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:17:12 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 42.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 38.4ms | ActiveRecord: 6.0ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:17:25 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 45.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 39.8ms | ActiveRecord: 8.0ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2024-12-27 04:17:26 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.4ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 227ms (Views: 7.7ms | ActiveRecord: 2.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-27 04:17:31 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 223ms (Views: 3.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-27 04:18:46 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"1", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 239ms (Views: 6.5ms | ActiveRecord: 7.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/1/2" for 127.0.0.1 at 2024-12-27 04:18:50 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.5ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."id" != 1 AND "operations"."book_id" = 1 AND "operations"."returned" IS NULL LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."id" != 2 AND "operations"."book_id" = 1 AND "operations"."returned" IS NULL LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (8.9ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-27 01:18:51.132915' WHERE "operations"."id" = 2 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Война и мир' AND "books"."id" != 1 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (0.6ms)[0m  [1m[33mUPDATE "books" SET "count" = 2, "updated_at" = '2024-12-27 01:18:51.164921' WHERE "books"."id" = 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:5000/admin_dashboard/all_books
+Completed 302 Found in 287ms (ActiveRecord: 39.7ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:18:51 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 49.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | GC: 0.0ms)
+Completed 200 OK in 264ms (Views: 46.0ms | ActiveRecord: 7.5ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:18:53 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 214ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2" for 127.0.0.1 at 2024-12-27 04:18:55 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"2"}
+  [1m[36mOperation Pluck (0.6ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 218ms (Views: 4.5ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:18:58 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 218ms (Views: 2.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:20:16 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 310ms (Views: 10.2ms | ActiveRecord: 7.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:21:14 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 285ms (Views: 9.2ms | ActiveRecord: 8.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:22:17 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 324ms (Views: 6.7ms | ActiveRecord: 9.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:22:54 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 408ms (Views: 11.8ms | ActiveRecord: 11.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:24:43 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 248ms (Views: 6.2ms | ActiveRecord: 7.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:24:46 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 220ms (Views: 2.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:25:39 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 246ms (Views: 7.8ms | ActiveRecord: 8.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:26:14 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 6.7ms | ActiveRecord: 7.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:27:13 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 453ms (Views: 11.4ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:27:57 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 311ms (Views: 6.0ms | ActiveRecord: 7.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:29:05 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 7.2ms | ActiveRecord: 7.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:29:23 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 319ms (Views: 7.9ms | ActiveRecord: 9.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:29:26 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 235ms (Views: 2.7ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:29:35 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 276ms (Views: 8.6ms | ActiveRecord: 8.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:30:43 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 249ms (Views: 6.8ms | ActiveRecord: 6.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:31:15 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 289ms (Views: 6.4ms | ActiveRecord: 8.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:31:42 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 10.7ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:32:27 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 295ms (Views: 7.9ms | ActiveRecord: 7.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:33:16 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 307ms (Views: 9.9ms | ActiveRecord: 8.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:33:47 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 243ms (Views: 6.1ms | ActiveRecord: 7.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:34:05 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 200 OK in 277ms (Views: 11.6ms | ActiveRecord: 7.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:34:47 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"2", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 248ms (Views: 6.6ms | ActiveRecord: 7.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/2/2" for 127.0.0.1 at 2024-12-27 04:34:51 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"2", "user_id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 2 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."id" != 3 AND "operations"."book_id" = 2 AND "operations"."returned" IS NULL LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (0.9ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-27 01:34:52.133448' WHERE "operations"."id" = 3 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Евгений Онегин' AND "books"."id" != 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (1.0ms)[0m  [1m[33mUPDATE "books" SET "count" = 1, "updated_at" = '2024-12-27 01:34:52.152859' WHERE "books"."id" = 2 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:5000/admin_dashboard/all_books
+Completed 302 Found in 274ms (ActiveRecord: 19.8ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:34:52 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 44.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | GC: 0.0ms)
+Completed 200 OK in 256ms (Views: 41.1ms | ActiveRecord: 6.8ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:34:55 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 218ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:34:57 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 45.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | GC: 0.0ms)
+Completed 200 OK in 255ms (Views: 40.6ms | ActiveRecord: 6.6ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/4" for 127.0.0.1 at 2024-12-27 04:34:57 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 214ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:34:58 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 215ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/3" for 127.0.0.1 at 2024-12-27 04:35:02 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать книгу", "book_id"=>"3"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2005@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 3 AND "operations"."returned" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (8.6ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 3, '2024-12-27 01:35:02.300425', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Герой нашего времени' AND "books"."id" != 3 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "count" = 0, "updated_at" = '2024-12-27 01:35:02.347268' WHERE "books"."id" = 3 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard/all_books
+Completed 302 Found in 274ms (ActiveRecord: 18.7ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:35:02 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 42.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | GC: 0.0ms)
+Completed 200 OK in 252ms (Views: 38.2ms | ActiveRecord: 6.1ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/4" for 127.0.0.1 at 2024-12-27 04:35:03 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 209ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/3" for 127.0.0.1 at 2024-12-27 04:35:04 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"3"}
+  [1m[36mOperation Pluck (0.5ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 221ms (Views: 5.1ms | ActiveRecord: 1.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/3/2" for 127.0.0.1 at 2024-12-27 04:35:05 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"3", "user_id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 214ms (Views: 2.0ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/admin_dashboard/take_book/3/2" for 127.0.0.1 at 2024-12-27 04:35:07 +0300
+Processing by OperationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Подтвердить", "book_id"=>"3", "user_id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:22:in `update'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 3 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:23:in `update'
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 3 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."id" != 4 AND "operations"."book_id" = 3 AND "operations"."returned" IS NULL LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mOperation Update (0.4ms)[0m  [1m[33mUPDATE "operations" SET "returned" = '2024-12-27 01:35:08.235252' WHERE "operations"."id" = 4 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:35:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Герой нашего времени' AND "books"."id" != 3 LIMIT 1 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "count" = 1, "updated_at" = '2024-12-27 01:35:08.252304' WHERE "books"."id" = 3 /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='update',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:37:in `update'
+Redirected to http://127.0.0.1:5000/admin_dashboard/all_books
+Completed 302 Found in 237ms (ActiveRecord: 10.0ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:35:08 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | GC: 0.0ms)
+Completed 200 OK in 247ms (Views: 37.8ms | ActiveRecord: 5.4ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:35:10 +0300
+Processing by AdminDashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 210ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-27 04:35:12 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 206ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-27 04:35:12 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 226ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:35:14 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 222ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-27 04:35:15 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 215ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:35:18 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 216ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:35:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 209ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:35:21 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 216ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-27 04:35:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 212ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-27 04:35:22 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 210ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-27 04:38:56 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2004@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard
+Completed 302 Found in 421ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:38:57 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 226ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-27 04:38:57 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2004@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard
+Completed 302 Found in 409ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-27 04:38:58 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 220ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:38:59 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 45.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | GC: 0.0ms)
+Completed 200 OK in 268ms (Views: 40.4ms | ActiveRecord: 7.1ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-27 04:39:00 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 229ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/4" for 127.0.0.1 at 2024-12-27 04:39:01 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 227ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/4" for 127.0.0.1 at 2024-12-27 04:39:03 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 219ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/admin_dashboard/give_out_book/4" for 127.0.0.1 at 2024-12-27 04:39:10 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать книгу", "book_id"=>"4"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 4 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:44:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2005@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 4 LIMIT 1[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = 2 AND "operations"."book_id" = 4 AND "operations"."returned" IS NULL LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mOperation Create (1.2ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES (2, 4, '2024-12-27 01:39:10.763574', NULL) RETURNING "id" /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:60:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = 'Мертвые души' AND "books"."id" != 4 LIMIT 1 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "count" = 0, "updated_at" = '2024-12-27 01:39:10.787969' WHERE "books"."id" = 4 /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:62:in `create'
+Redirected to http://127.0.0.1:5000/admin_dashboard/all_books
+Completed 302 Found in 261ms (ActiveRecord: 11.0ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-27 04:39:10 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 5 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 6 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 7 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 8 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 9 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 10 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 11 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 12 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 13 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 14 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 15 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 60.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | GC: 0.0ms)
+Completed 200 OK in 286ms (Views: 54.9ms | ActiveRecord: 9.1ms (16 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/5" for 127.0.0.1 at 2024-12-27 04:39:11 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 234ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/4" for 127.0.0.1 at 2024-12-27 04:39:12 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"4"}
+  [1m[36mOperation Pluck (0.5ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 4 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:11:in `show'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 4 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:15
+  Rendered operations/show.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 239ms (Views: 5.0ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/4/2" for 127.0.0.1 at 2024-12-27 04:39:14 +0300
+Processing by OperationsController#index as HTML
+  Parameters: {"book_id"=>"4", "user_id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 4 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:18:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  Rendered operations/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 223ms (Views: 2.9ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-12-29 00:39:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | GC: 0.0ms)
+Completed 200 OK in 1180ms (Views: 173.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-961cdb18.css" for 127.0.0.1 at 2024-12-29 00:39:38 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 00:39:38 +0300
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 00:39:38 +0300
+Started GET "/login" for 127.0.0.1 at 2024-12-29 00:39:40 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 178.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 180.1ms | GC: 0.0ms)
+Completed 200 OK in 444ms (Views: 182.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-29 00:39:43 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2004@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/admin_dashboard
+Completed 302 Found in 805ms (ActiveRecord: 40.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 00:39:44 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 246ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-29 00:39:46 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 214ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-29 00:39:46 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 212ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-29 00:39:47 +0300
+Processing by UsersController#new as HTML
+Started GET "/login" for 127.0.0.1 at 2024-12-29 00:39:47 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | GC: 0.0ms)
+Completed 200 OK in 281ms (Views: 12.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.2ms)
+Completed 200 OK in 222ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-12-29 00:39:48 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 225ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-29 00:39:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 217ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-29 00:39:53 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'shun2005@mail.ru' LIMIT 1 /*action='create',application='Onlibrary',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/user_dashboard
+Completed 302 Found in 408ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 00:39:53 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 247ms (Views: 4.3ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
