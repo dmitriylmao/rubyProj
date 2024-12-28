@@ -20,7 +20,7 @@
       <tr>
         <th class="py-4 px-6 text-left">Название</th>
         <th class="py-4 px-6 text-left">Автор</th>
-        <th class="py-4 px-6 text-center">Дата выдачи</th>
+        <th class="py-4 px-6 text-right">Дата выдачи</th>
       </tr>
       </thead>
       <tbody>
@@ -28,7 +28,7 @@
         <tr class="hover:bg-teal-100 transition-all duration-300 ease-in-out">
           <td class="py-4 px-6 border-b border-gray-300"><%= book.name %></td>
           <td class="py-4 px-6 border-b border-gray-300"><%= book.author %></td>
-          <td class="py-4 px-6 border-b border-gray-300 text-center" >
+          <td class="py-4 px-6 border-b border-gray-300 text-right" >
             <%= Operation.order(returned: :desc).find_by_book_id(book.id).took.strftime("%d-%m-%Y") %>
           </td>
         </tr>

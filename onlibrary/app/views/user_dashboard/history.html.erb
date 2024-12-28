@@ -11,12 +11,10 @@
     <% end %>
   </div>
 
-  <!-- Заголовок -->
   <h1 class="text-6xl font-extrabold text-gray-800 mb-12 drop-shadow-lg font-montserrat">
     Книги, которые Вы уже вернули
   </h1>
 
-  <!-- Таблица -->
   <div class="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
     <table class="min-w-full text-lg text-gray-700">
       <thead class="bg-gradient-to-l from-yellow-900 to-cyan-900 text-white">
@@ -24,7 +22,7 @@
         <th class="py-4 px-6 text-left">Название</th>
         <th class="py-4 px-6 text-left">Автор</th>
         <th class="py-4 px-6 text-center">Дата выдачи</th>
-        <th class="py-4 px-6 text-center">Дата возврата</th>
+        <th class="py-4 px-6 text-right">Дата возврата</th>
       </tr>
       </thead>
       <tbody>
@@ -33,7 +31,7 @@
           <td class="py-4 px-6 border-b border-gray-300"><%= Book.find_by_id(operation.book).name %></td>
           <td class="py-4 px-6 border-b border-gray-300"><%= Book.find_by_id(operation.book).author %></td>
           <td class="py-4 px-6 border-b border-gray-300 text-center"><%= operation.took.strftime("%d-%m-%Y") %></td>
-          <td class="py-4 px-6 border-b border-gray-300 text-center"><%= operation.returned.strftime("%d-%m-%Y") %></td>
+          <td class="py-4 px-6 border-b border-gray-300 text-right"><%= operation.returned.strftime("%d-%m-%Y") %></td>
         </tr>
       <% end %>
       </tbody>
