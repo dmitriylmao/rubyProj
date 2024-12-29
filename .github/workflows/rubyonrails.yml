@@ -50,4 +50,6 @@ jobs:
 
       - name: Run tests
         working-directory: ./onlibrary
-        run: rails test
+        run: |
+          bundle exec rails db:test:prepare
+          rails test
