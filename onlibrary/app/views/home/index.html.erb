@@ -7,86 +7,19 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
       body {
-          background-image: url('https://masterpiecer-images.s3.yandex.net/5585c86cc3a911ef9e744225dc2fd411:1'); /* Замените на свой URL */
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 100vh;
-          font-family: 'Menlo', monospace;
-          font-size: 1.2rem;
-      }
-
-      .content-container {
-          text-align: center;
-          max-width: 80%;
-          padding: 2rem;
-          background: rgba(255, 255, 255, 0.7);
-          border-radius: 0.5rem;
-      }
-
-      .library-title {
-          font-size: 6rem;
-          font-weight: bold;
-          letter-spacing: 0.2rem;
-          text-transform: uppercase;
-          margin-bottom: 0.5rem;
-          color: #007bff;
-      }
-
-      .welcome-text {
-          font-size: 1.5rem;
-          font-weight: bold;
-          letter-spacing: 0.2rem;
-          text-transform: uppercase;
-          margin-bottom: 2rem;
-          color: #007bff;
-      }
-
-
-      .login-button {
-          background-color: #ff9800;
-          color: #0180ff;
-          font-weight: bold;
-          padding: 1.5rem 3rem;
-          font-size: 1.3rem;
-          border-radius: 0.5rem;
-          display: inline-block;
-          text-decoration: none;
-          margin-bottom: 1rem;
-          transition: background-color 0.3s ease;
-      }
-      .login-button:hover {
-          background-color: #e68a00;
-      }
-
-      .register-button {
-          color: #0055d4;
-          font-size: 1.3rem;
-          text-decoration: none;
-          transition: color 0.3s ease, text-decoration 0.3s ease;
-      }
-
-      .register-button:hover {
-          color: #014c75;
-          text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-          .library-title {
-              font-size: 4rem;
-          }
+          font-family: 'Montserrat', sans-serif;
       }
   </style>
 </head>
-<body>
-<div class="content-container">
-  <h1 class="library-title">Добро пожаловать в библиотеку!</h1>
-  <p class="welcome-text">Исследуйте мир литературы и знаний.</p>
-  <a href="/login" class="login-button">Войти</a><br>
-  <a href="/register" class="register-button">Регистрация</a>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 p-8 relative">
+
+<div class="text-center">
+  <h1 class="text-6xl font-extrabold text-purple-700 mb-6 drop-shadow-lg">Добро пожаловать в библиотеку!</h1>
+  <p class="mb-6 text-green-400 text-xl">Исследуйте мир литературы и знаний.</p>
 </div>
+
+<a href="/register" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">Регистрация</a>
+
+>>>>>>> dev
 </body>
 </html>
