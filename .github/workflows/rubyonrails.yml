@@ -37,6 +37,7 @@ jobs:
           bundler-cache: true # Кешируем зависимости Bundler
 
       - name: Install dependencies
+        working-directory: ./onlibrary
         run: bundle install
 
       - name: Configure database
@@ -46,4 +47,5 @@ jobs:
           bundle exec rails db:create db:migrate # Создаем и мигрируем базу данных
 
       - name: Run tests
+        working-directory: ./onlibrary
         run: rails test
