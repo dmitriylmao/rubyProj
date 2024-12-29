@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 font-montserrat font-extrabold">
+  <div class="flex flex-col p-4 items-center justify-center bg-gradient-to-r from-pink-300 to-pink-400 font-montserrat font-extrabold rounded-lg  w-1/2">
+    <h1 class="text-2xl font-bold mb-4 ">
+      Принять книгу <%= @book.name %> у пользователя <%= @user.username %>
+    </h1>
+
+    <%= form_with(url: admin_dashboard_take_book_user_path(@book.id, @user.id), method: :patch, local: true, class: "mt-4") do |form| %>
+      <div class="flex justify-center">
+        <%= form.submit "Подтвердить", class: "px-4 py-2 bg-red-200 text-black font-semibold rounded hover:bg-pink-500 cursor-pointer transition-all duration-300 ease-in-out" %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+=======
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -82,3 +98,4 @@
 </div>
 </body>
 </html>
+>>>>>>> dev
