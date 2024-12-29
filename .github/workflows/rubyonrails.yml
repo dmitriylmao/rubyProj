@@ -6,8 +6,6 @@
 # run tests and linters.
 name: "Ruby on Rails CI"
 on:
-  push:
-    branches: [ "main", "dev" ] # Запускать при push в main и dev
   pull_request:
     branches: [ "main", "dev" ] # Запускать при pull request в main и dev
 
