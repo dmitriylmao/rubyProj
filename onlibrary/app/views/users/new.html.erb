@@ -5,31 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Регистрация нового пользователя</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+  </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-300 to-blue-500 p-8 relative">
 
-<div class="bg-white p-8 rounded-lg shadow-md w-96">
-  <h2 class="text-2xl font-semibold text-center mb-6">Регистрация</h2>
+<div class="bg-gradient-to-r from-blue-400 to-purple-600 p-10 rounded-lg shadow-xl w-full max-w-md relative mt-10">
+  <div class="top-[-80px] left-0 right-0 text-center">
+    <h2 class="text-4xl font-extrabold text-white drop-shadow-lg">Регистрация</h2>
+    <p class="mt-2 text-lg text-white">Присоединяйтесь к нам!</p>
+  </div>
   <%= form_for :user do |f| %>
     <div class="mb-4">
-      <%= f.label :username, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.text_field :username, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+      <%= f.label :username,"Логин", class: "block text-sm font-medium text-gray-100" %>
+      <%= f.text_field :username, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" %>
     </div>
     <div class="mb-4">
-      <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.email_field :email, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+      <%= f.label :email,"Почта", class: "block text-sm font-medium text-gray-100" %>
+      <%= f.email_field :email, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" %>
     </div>
     <div class="mb-4">
-      <%= f.label :password, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.password_field :password, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+      <%= f.label :password,"Пароль", class: "block text-sm font-medium text-gray-100" %>
+      <%= f.password_field :password, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" %>
     </div>
     <div class="mb-4">
-      <%= f.label :password_confirmation, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.password_field :password_confirmation, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+      <%= f.label :password_confirmation,"Подтверждение пароля", class: "block text-sm font-medium text-gray-100" %>
+      <%= f.password_field :password_confirmation, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" %>
     </div>
-    <%= f.submit "Зарегистрироваться", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md" %>
+    <%= f.submit "Зарегистрироваться", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md transition duration-300 ease-in-out" %>
   <% end %>
-  <p class="mt-4 text-center text-sm text-gray-600">Есть аккаунт? <%= link_to 'Войти', login_path, class: "text-blue-600 hover:underline" %></p>
+  <p class="mt-4 text-center text-sm text-white">Есть аккаунт? <%= link_to 'Войти', login_path, class: "text-blue-400 hover:underline" %></p>
 </div>
 
 </body>
