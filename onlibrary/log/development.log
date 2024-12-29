@@ -42427,3 +42427,5 @@ Completed 200 OK in 431ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cach
 Completed 200 OK in 337ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
