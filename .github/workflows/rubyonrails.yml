@@ -1,0 +1,49 @@
+# This workflow uses actions that are not certified by GitHub.  They are
+# provided by a third-party and are governed by separate terms of service,
+# privacy policy, and support documentation.
+#
+# This workflow will install a prebuilt Ruby version, install dependencies, and
+# run tests and linters.
+name: "Ruby on Rails CI"
+on:
+  pull_request:
+    branches: [ "main", "dev" ] # Запускать при pull request в main и dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Используем Ubuntu
+
+    services: # Определение сервиса PostgreSQL
+      postgres:
+        image: postgres:15 # Используем PostgreSQL 15
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password # Временный пароль, в production лучше использовать secrets
+          POSTGRES_DB: rubyproj_test # Имя тестовой базы данных
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3 # Клонируем репозиторий
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3.3 # Указываем версию Ruby
+          bundler-cache: true # Кешируем зависимости Bundler
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Configure database
+        run: |
+          cp config/database.yml.example config/database.yml
+          sed -i 's/password/password/' config/database.yml # Заменяем пароль в config/database.yml
+          bundle exec rails db:create db:migrate # Создаем и мигрируем базу данных
+
+      - name: Run tests
+        run: rails test
