@@ -26,6 +26,7 @@
           z-index: -1;
           pointer-events: none;
           user-select: none;
+          line-height: 1;
       }
 
       .content-wrapper {
@@ -35,25 +36,31 @@
           justify-content: center;
           min-height: 100vh;
       }
+      .colorful-border {
+          border: 2px solid;
+          border-image-source: linear-gradient(to right, #ff00cc, #33ccff);
+          border-image-slice: 1;
+
+      }
   </style>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-sans">
 
 <div class="background-at">@</div>
 
 <div class="content-wrapper">
-  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
-  <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+  <h1 class="text-4xl font-semibold mb-8 text-purple-700 drop-shadow-lg">Введите ваш Email</h1>
+  <div class="w-full max-w-md p-8 rounded-lg custom-shadow colorful-border bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
     <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
       <div class="relative">
         <%= form.email_field :email,
-                             class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                             class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-700 placeholder-transparent',
                              placeholder: " " %>
         <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
 
       </div>
       <%= form.submit 'Выдать книгу',
-                      class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+                      class: 'w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
     <% end %>
   </div>
 </div>
