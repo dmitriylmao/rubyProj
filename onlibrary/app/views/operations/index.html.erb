@@ -1,84 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Принять книгу</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-      body {
-          font-family: sans-serif;
-          background-color: #ffffff;
-          color: #000080;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 100vh;
-      }
-      .container {
-          background-color: #f9f9f9;
-          padding: 4rem;
-          border-radius: 1rem;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          width: 95%;
-          max-width: 800px;
-      }
-      h1 {
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 2rem;
-          width: 100%;
-          word-wrap: break-word;
-      }
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 font-montserrat font-extrabold">
+  <div class="flex flex-col p-4 items-center justify-center bg-gradient-to-r from-pink-300 to-pink-400 font-montserrat font-extrabold rounded-lg  w-1/2">
+    <h1 class="text-2xl font-bold mb-4 ">
+      Принять книгу <%= @book.name %> у пользователя <%= @user.username %>
+    </h1>
 
-      h1 span.user-info-break {
-          display: block;
-      }
-
-      h1 span.inline-text {
-          display: inline-block;
-      }
-      .button {
-          background-color: #FF8C00;
-          color: white;
-          padding: 1rem 2rem;
-          border: none;
-          border-radius: 0.5rem;
-          cursor: pointer;
-          transition: background-color 0.2s ease-in-out;
-          font-weight: 600;
-          font-size: 1.1rem;
-          outline: none;
-          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
-
-      }
-      .button:hover {
-          background-color: #FF7300;
-      }
-      .button:focus {
-          outline: none;
-          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.5);
-
-      }
-      .form-wrapper {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-      }
-  </style>
-</head>
-<body>
-<div class="container">
-  <h1 style="text-align:center">
-    <span class="inline-text">Принять книгу <%= @book.name %></span>
-    <span class="user-info-break"> у пользователя <%= @user.username %></span>
-  </h1>
-  <div class="form-wrapper">
-    <%= form_with(url: admin_dashboard_take_book_user_path(@book.id, @user.id), method: :patch, local: true) do |form| %>
-      <%= form.submit "Подтвердить", class: "button" %>
+    <%= form_with(url: admin_dashboard_take_book_user_path(@book.id, @user.id), method: :patch, local: true, class: "mt-4") do |form| %>
+      <div class="flex justify-center">
+        <%= form.submit "Подтвердить", class: "px-4 py-2 bg-red-200 text-black font-semibold rounded hover:bg-pink-500 cursor-pointer transition-all duration-300 ease-in-out" %>
+      </div>
     <% end %>
   </div>
+
 </div>
-</body>
-</html>
