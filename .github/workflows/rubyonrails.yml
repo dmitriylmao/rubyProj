@@ -10,7 +10,7 @@ on:
     branches: [ "main", "dev" ] # Запускать при pull request в main и dev
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest # Используем Ubuntu
 
     services: # Определение сервиса PostgreSQL
