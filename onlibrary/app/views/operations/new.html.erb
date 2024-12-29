@@ -1,14 +1,62 @@
-<div class="flex flex-col items-center justify-center h-screen bg-gray-50 p-4">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .custom-shadow {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
 
-  <h1 class="text-3xl font-bold mb-6">Введите ваш Email</h1>
+      .custom-focus:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          border-color: rgba(255, 165, 0, 0.5);
+      }
 
-  <%= form_for :operation do |form| %>
-    <div class="mb-4">
-      <%= form.label :email, 'Email', class: 'block text-gray-700 text-sm font-bold mb-2' %>
-      <%= form.email_field :email, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
-    </div>
+      .background-at {
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60rem;
+          color: rgba(64, 128, 255, 0.1);
+          z-index: -1;
+          pointer-events: none;
+          user-select: none;
+      }
 
-    <%= form.submit 'Выдать', class: 'bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
-  <% end %>
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+      }
+  </style>
+</head>
+<body class="bg-white font-sans">
 
+<div class="background-at">@</div>
+
+<div class="content-wrapper">
+  <h1 class="text-4xl font-semibold mb-8 text-blue-700">Введите ваш Email</h1>
+  <div class="w-full max-w-md bg-white p-8 rounded-lg custom-shadow">
+    <%= form_for :operation, html: { class: "space-y-6"} do |form| %>
+      <div class="relative">
+        <%= form.email_field :email,
+                             class: 'peer w-full p-3 border border-gray-300 rounded focus:border-orange-500 focus:ring-orange-500 focus:ring-opacity-25 custom-focus text-blue-800 placeholder-transparent',
+                             placeholder: " " %>
+        <%= form.label :email, 'Email', class: "peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-translate-y-3  peer-focus:text-xs peer-focus:text-orange-500 absolute left-3 top-3 transition-all" %>
+
+      </div>
+      <%= form.submit 'Выдать книгу',
+                      class: 'w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition-colors duration-200 ease-in-out cursor-pointer' %>
+    <% end %>
+  </div>
 </div>
+
+</body>
+</html>
