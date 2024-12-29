@@ -7444,3 +7444,2052 @@ OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
   [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+BookTest: test_uniqueness_of_names
+----------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (3.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "Dave"], ["count", 100], ["created_at", "2024-12-29 14:43:33.938240"], ["updated_at", "2024-12-29 14:43:33.938240"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+BookTest: test_is_valid_when_count_<_0
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+BookTest: test_is_not_valid_when_some_fields_aren't_filled_in
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mCACHE Book Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+BookTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:43:33.951118"], ["updated_at", "2024-12-29 14:43:33.951118"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (4.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:34.601194"], ["updated_at", "2024-12-29 14:43:34.601194"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 160], ["book_id", 58], ["LIMIT", 1]]
+  [1m[36mOperation Create (2.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 160], ["book_id", 58], ["took", "2024-12-29 14:43:34.645424"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 160], ["book_id", 58], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 160], ["book_id", 58], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."id" != $2 AND "operations"."book_id" = $3 AND "operations"."returned" IS NULL LIMIT $4[0m  [["user_id", 160], ["id", 34], ["book_id", 58], ["LIMIT", 1]]
+  [1m[36mOperation Update (1.7ms)[0m  [1m[33mUPDATE "operations" SET "returned" = $1 WHERE "operations"."id" = $2[0m  [["returned", "2024-12-29 14:43:34.660461"], ["id", 34]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 160], ["book_id", 58], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+OperationTest: test_returned_after_took
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+UserWorkflowTest: test_successful_registration
+----------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:35.618393"], ["updated_at", "2024-12-29 14:43:35.618393"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:43:39 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 28.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | GC: 0.0ms)
+Completed 200 OK in 287ms (Views: 72.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 17:43:40 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 17:43:40 +0300
+Started GET "/assets/application-a961d2ba.css" for 127.0.0.1 at 2024-12-29 17:43:40 +0300
+[dotenv] Restored snapshot of [32mENV[0m
+[dotenv] Unset [31mRACK_ENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+UserWorkflowTest: test_registration_show
+----------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:43.082206"], ["updated_at", "2024-12-29 14:43:43.082206"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:43:43 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserWorkflowTest: test_successful_login
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:43.646108"], ["updated_at", "2024-12-29 14:43:43.646108"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:43:43 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+AdminWorkflowTest: test_giving_out_and_taking_back_books
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:46.487464"], ["updated_at", "2024-12-29 14:43:46.487464"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:43:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+AdminWorkflowTest: test_admin_dashboard_show
+--------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:49.366017"], ["updated_at", "2024-12-29 14:43:49.366017"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:43:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+AdminWorkflowTest: test_adding_book_and_showing_all_books
+---------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:52.185278"], ["updated_at", "2024-12-29 14:43:52.185278"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:43:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+AdminWorkflowTest: test_admin_autorisation
+------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:54.996231"], ["updated_at", "2024-12-29 14:43:54.996231"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:43:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dima"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dima"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:57.798542"], ["updated_at", "2024-12-29 14:43:57.798542"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Egor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+UserTest: test_user_without_attributes
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_unique_username
+------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:43:58.953634"], ["updated_at", "2024-12-29 14:43:58.953634"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+UserTest: test_admin_account
+----------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:45:34.863902"], ["updated_at", "2024-12-29 14:45:34.863902"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:35.113652"], ["updated_at", "2024-12-29 14:45:35.113652"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 170], ["book_id", 59], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 170], ["book_id", 59], ["took", "2024-12-29 14:45:35.124410"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 170], ["book_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 170], ["book_id", 59], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."id" != $2 AND "operations"."book_id" = $3 AND "operations"."returned" IS NULL LIMIT $4[0m  [["user_id", 170], ["id", 35], ["book_id", 59], ["LIMIT", 1]]
+  [1m[36mOperation Update (0.3ms)[0m  [1m[33mUPDATE "operations" SET "returned" = $1 WHERE "operations"."id" = $2[0m  [["returned", "2024-12-29 14:45:35.129252"], ["id", 35]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 170], ["book_id", 59], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+OperationTest: test_returned_after_took
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+UserWorkflowTest: test_successful_registration
+----------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:36.083123"], ["updated_at", "2024-12-29 14:45:36.083123"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:45:39 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 19.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 17:45:39 +0300
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 17:45:39 +0300
+Started GET "/assets/application-a961d2ba.css" for 127.0.0.1 at 2024-12-29 17:45:39 +0300
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:45:40 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:40.639953"], ["updated_at", "2024-12-29 14:45:40.639953"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49484/user_dashboard
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:45:40 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+[dotenv] Restored snapshot of [32mENV[0m
+[dotenv] Unset [31mRACK_ENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+UserWorkflowTest: test_registration_show
+----------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:43.542697"], ["updated_at", "2024-12-29 14:45:43.542697"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:45:43 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserWorkflowTest: test_successful_login
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:44.088180"], ["updated_at", "2024-12-29 14:45:44.088180"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:45:44 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:45:44 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:44.706561"], ["updated_at", "2024-12-29 14:45:44.706561"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49484/user_dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:45:44 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 175], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+AdminWorkflowTest: test_giving_out_and_taking_back_books
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:47.428054"], ["updated_at", "2024-12-29 14:45:47.428054"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:45:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+AdminWorkflowTest: test_adding_book_and_showing_all_books
+---------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:50.249688"], ["updated_at", "2024-12-29 14:45:50.249688"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:45:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+AdminWorkflowTest: test_admin_dashboard_show
+--------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:53.054469"], ["updated_at", "2024-12-29 14:45:53.054469"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:45:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+AdminWorkflowTest: test_admin_autorisation
+------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:55.868579"], ["updated_at", "2024-12-29 14:45:55.868579"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:45:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+BookTest: test_uniqueness_of_names
+----------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "Dave"], ["count", 100], ["created_at", "2024-12-29 14:45:58.497663"], ["updated_at", "2024-12-29 14:45:58.497663"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+BookTest: test_is_not_valid_when_some_fields_aren't_filled_in
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mCACHE Book Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+BookTest: test_is_valid_when_count_<_0
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+BookTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+UserTest: test_user_without_attributes
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+UserTest: test_admin_account
+----------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_unique_username
+------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:45:59.644175"], ["updated_at", "2024-12-29 14:45:59.644175"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dima"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dima"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:46:00.026520"], ["updated_at", "2024-12-29 14:46:00.026520"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Egor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+BookTest: test_is_valid_when_count_<_0
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+BookTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+BookTest: test_uniqueness_of_names
+----------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "Dave"], ["count", 100], ["created_at", "2024-12-29 14:47:03.383597"], ["updated_at", "2024-12-29 14:47:03.383597"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+BookTest: test_is_not_valid_when_some_fields_aren't_filled_in
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mCACHE Book Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserWorkflowTest: test_successful_login
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:03.639913"], ["updated_at", "2024-12-29 14:47:03.639913"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:47:07 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 18.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/assets/application-a961d2ba.css" for 127.0.0.1 at 2024-12-29 17:47:07 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 17:47:07 +0300
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 17:47:07 +0300
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:08.149658"], ["updated_at", "2024-12-29 14:47:08.149658"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49513/user_dashboard
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 183], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+Redirected to http://127.0.0.1:49513/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:47:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+[dotenv] Restored snapshot of [32mENV[0m
+[dotenv] Unset [31mRACK_ENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+UserWorkflowTest: test_successful_registration
+----------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:11.299547"], ["updated_at", "2024-12-29 14:47:11.299547"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:47:11 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:47:11 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:11.911914"], ["updated_at", "2024-12-29 14:47:11.911914"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49513/user_dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:47:11 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 185], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+UserWorkflowTest: test_registration_show
+----------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:12.491390"], ["updated_at", "2024-12-29 14:47:12.491390"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:47:12 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+AdminWorkflowTest: test_admin_dashboard_show
+--------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:13.058006"], ["updated_at", "2024-12-29 14:47:13.058006"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:47:13 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:47:13 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49513/admin_dashboard
+Completed 302 Found in 193ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:47:13 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+AdminWorkflowTest: test_admin_autorisation
+------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:14.183969"], ["updated_at", "2024-12-29 14:47:14.183969"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:47:14 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:47:14 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49513/admin_dashboard
+Completed 302 Found in 192ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:47:14 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+AdminWorkflowTest: test_giving_out_and_taking_back_books
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:15.247211"], ["updated_at", "2024-12-29 14:47:15.247211"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:47:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:47:15 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:47:15 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49513/admin_dashboard
+Completed 302 Found in 193ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+AdminWorkflowTest: test_adding_book_and_showing_all_books
+---------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:18.512641"], ["updated_at", "2024-12-29 14:47:18.512641"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:47:18 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:47:18 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:47:18 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49513/admin_dashboard
+Completed 302 Found in 189ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+OperationTest: test_returned_after_took
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:47:21.966249"], ["updated_at", "2024-12-29 14:47:21.966249"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:22.156419"], ["updated_at", "2024-12-29 14:47:22.156419"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 191], ["book_id", 62], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 191], ["book_id", 62], ["took", "2024-12-29 14:47:22.157525"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 191], ["book_id", 62], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 191], ["book_id", 62], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."id" != $2 AND "operations"."book_id" = $3 AND "operations"."returned" IS NULL LIMIT $4[0m  [["user_id", 191], ["id", 36], ["book_id", 62], ["LIMIT", 1]]
+  [1m[36mOperation Update (0.3ms)[0m  [1m[33mUPDATE "operations" SET "returned" = $1 WHERE "operations"."id" = $2[0m  [["returned", "2024-12-29 14:47:22.160473"], ["id", 36]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 191], ["book_id", 62], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_unique_username
+------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:22.933499"], ["updated_at", "2024-12-29 14:47:22.933499"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dima"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dima"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:47:23.319642"], ["updated_at", "2024-12-29 14:47:23.319642"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Egor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+UserTest: test_admin_account
+----------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+UserTest: test_user_without_attributes
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+AdminWorkflowTest: test_giving_out_and_taking_back_books
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:48:54.170938"], ["updated_at", "2024-12-29 14:48:54.170938"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:48:57 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 19.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 17:48:57 +0300
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 17:48:57 +0300
+Started GET "/assets/application-a961d2ba.css" for 127.0.0.1 at 2024-12-29 17:48:57 +0300
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:48:58 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:48:58 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 192ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:48:58 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:48:59.002423"], ["updated_at", "2024-12-29 14:48:59.002423"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/user_dashboard
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:48:59 +0300
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:48:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 195], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:48:59 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:48:59 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:48:59.428430"], ["updated_at", "2024-12-29 14:48:59.428430"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 191ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+[dotenv] Restored snapshot of [32mENV[0m
+[dotenv] Unset [31mRACK_ENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+AdminWorkflowTest: test_admin_dashboard_show
+--------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:02.184810"], ["updated_at", "2024-12-29 14:49:02.184810"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:02 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:02 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 190ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:49:02 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+AdminWorkflowTest: test_admin_autorisation
+------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:03.307959"], ["updated_at", "2024-12-29 14:49:03.307959"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:03 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 189ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:49:03 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+AdminWorkflowTest: test_adding_book_and_showing_all_books
+---------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:04.312556"], ["updated_at", "2024-12-29 14:49:04.312556"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:04 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:04 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:04 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 192ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:05 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"name"=>"book", "author"=>"author", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:49:05.234655"], ["updated_at", "2024-12-29 14:49:05.234655"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:49:05 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:49:05 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 64]]
+  Rendered books/index.html.erb within layouts/application (Duration: 12.4ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.2ms)
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:05 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:05 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:06 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"name"=>"book", "author"=>"author", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["name", "book"], ["id", 64], ["LIMIT", 1]]
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "count" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["count", 200], ["updated_at", "2024-12-29 14:49:06.202157"], ["id", 64]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/admin_dashboard
+Completed 302 Found in 11ms (ActiveRecord: 7.1ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:49:06 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:49:06 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 64]]
+  Rendered books/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+UserWorkflowTest: test_successful_registration
+----------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:09.004214"], ["updated_at", "2024-12-29 14:49:09.004214"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:09 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:49:09 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:09.664114"], ["updated_at", "2024-12-29 14:49:09.664114"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/user_dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:09 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 200], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserWorkflowTest: test_successful_login
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:10.244387"], ["updated_at", "2024-12-29 14:49:10.244387"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:10 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:49:10 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:10.913901"], ["updated_at", "2024-12-29 14:49:10.913901"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49548/user_dashboard
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:10 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 202], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+Redirected to http://127.0.0.1:49548/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49548/user_dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:11 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 202], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+UserWorkflowTest: test_registration_show
+----------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:12.110190"], ["updated_at", "2024-12-29 14:49:12.110190"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:12 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+BookTest: test_uniqueness_of_names
+----------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "Dave"], ["count", 100], ["created_at", "2024-12-29 14:49:12.473331"], ["updated_at", "2024-12-29 14:49:12.473331"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+BookTest: test_is_valid_when_count_<_0
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+BookTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+BookTest: test_is_not_valid_when_some_fields_aren't_filled_in
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mCACHE Book Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_unique_username
+------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:12.671613"], ["updated_at", "2024-12-29 14:49:12.671613"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dima"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dima"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:13.054176"], ["updated_at", "2024-12-29 14:49:13.054176"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Egor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+UserTest: test_user_without_attributes
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+UserTest: test_admin_account
+----------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:49:14.396111"], ["updated_at", "2024-12-29 14:49:14.396111"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:14.587075"], ["updated_at", "2024-12-29 14:49:14.587075"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 206], ["book_id", 66], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.4ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 206], ["book_id", 66], ["took", "2024-12-29 14:49:14.593544"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 206], ["book_id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 206], ["book_id", 66], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."id" != $2 AND "operations"."book_id" = $3 AND "operations"."returned" IS NULL LIMIT $4[0m  [["user_id", 206], ["id", 37], ["book_id", 66], ["LIMIT", 1]]
+  [1m[36mOperation Update (0.3ms)[0m  [1m[33mUPDATE "operations" SET "returned" = $1 WHERE "operations"."id" = $2[0m  [["returned", "2024-12-29 14:49:14.598274"], ["id", 37]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 206], ["book_id", 66], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+OperationTest: test_returned_after_took
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserWorkflowTest: test_successful_login
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:46.859728"], ["updated_at", "2024-12-29 14:49:46.859728"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:50 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.0ms)
+Completed 200 OK in 50ms (Views: 23.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/assets/application-a961d2ba.css" for 127.0.0.1 at 2024-12-29 17:49:50 +0300
+Started GET "/assets/application.tailwind-a734f247.css" for 127.0.0.1 at 2024-12-29 17:49:50 +0300
+Started GET "/assets/application-0405dba2.js" for 127.0.0.1 at 2024-12-29 17:49:50 +0300
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:51.305233"], ["updated_at", "2024-12-29 14:49:51.305233"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/user_dashboard
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+Started DELETE "/logout" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by SessionsController#destroy as TURBO_STREAM
+Redirected to http://127.0.0.1:49578/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:52 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49578/user_dashboard
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:52 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+[dotenv] Restored snapshot of [32mENV[0m
+[dotenv] Unset [31mRACK_ENV[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+UserWorkflowTest: test_registration_show
+----------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:52.469093"], ["updated_at", "2024-12-29 14:49:52.469093"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:52 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+UserWorkflowTest: test_successful_registration
+----------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:53.018873"], ["updated_at", "2024-12-29 14:49:53.018873"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:53 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:49:53 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:53.635359"], ["updated_at", "2024-12-29 14:49:53.635359"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/user_dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:53 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+BookTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+BookTest: test_uniqueness_of_names
+----------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "Dave"], ["count", 100], ["created_at", "2024-12-29 14:49:54.066538"], ["updated_at", "2024-12-29 14:49:54.066538"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+BookTest: test_is_not_valid_when_some_fields_aren't_filled_in
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mCACHE Book Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+BookTest: test_is_valid_when_count_<_0
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mBook Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+UserTest: test_user_without_attributes
+--------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------
+UserTest: test_unique_username
+------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:55.019405"], ["updated_at", "2024-12-29 14:49:55.019405"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+UserTest: test_is_valid_when_all_fields_are_filled_in
+-----------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dima"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dima"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:55.595485"], ["updated_at", "2024-12-29 14:49:55.595485"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Egor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+UserTest: test_admin_account
+----------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+OperationTest: test_is_valid_when_all_fields_are_filled_in
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+OperationTest: test_the_user_cannot_take_two_identical_books
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:49:56.194672"], ["updated_at", "2024-12-29 14:49:56.194672"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Олег"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Олег"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:56.386111"], ["updated_at", "2024-12-29 14:49:56.386111"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 214], ["book_id", 68], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.5ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 214], ["book_id", 68], ["took", "2024-12-29 14:49:56.388451"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 214], ["book_id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 214], ["book_id", 68], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."id" != $2 AND "operations"."book_id" = $3 AND "operations"."returned" IS NULL LIMIT $4[0m  [["user_id", 214], ["id", 38], ["book_id", 68], ["LIMIT", 1]]
+  [1m[36mOperation Update (0.4ms)[0m  [1m[33mUPDATE "operations" SET "returned" = $1 WHERE "operations"."id" = $2[0m  [["returned", "2024-12-29 14:49:56.393934"], ["id", 38]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mOperation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 214], ["book_id", 68], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------
+OperationTest: test_is_not_valid_when_some_fields_aren't_filled_in
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Operation Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+OperationTest: test_returned_after_took
+---------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mOperation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" IS NULL AND "operations"."book_id" IS NULL AND "operations"."returned" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+AdminWorkflowTest: test_admin_autorisation
+------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:57.164427"], ["updated_at", "2024-12-29 14:49:57.164427"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:57 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:57 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 191ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:49:57 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+AdminWorkflowTest: test_giving_out_and_taking_back_books
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:58.223399"], ["updated_at", "2024-12-29 14:49:58.223399"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:58 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:58 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/register" for 127.0.0.1 at 2024-12-29 17:49:58 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 190ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/register" for 127.0.0.1 at 2024-12-29 17:49:59 +0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"user"=>{"username"=>"testUser", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testUser"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testUser"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:49:59.265030"], ["updated_at", "2024-12-29 14:49:59.265030"], ["role", "user"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/user_dashboard
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:49:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/user_dashboard" for 127.0.0.1 at 2024-12-29 17:49:59 +0300
+Processing by UserDashboardController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 217], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering user_dashboard/index.html.erb within layouts/application
+  Rendered user_dashboard/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:49:59 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:49:59 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:49:59.711425"], ["updated_at", "2024-12-29 14:49:59.711425"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 196ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:00 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"name"=>"book", "author"=>"author", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["name", "book"], ["id", 69], ["LIMIT", 1]]
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "count" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["count", 200], ["updated_at", "2024-12-29 14:50:00.139087"], ["id", 69]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:50:00 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:50:00 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 69]]
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/give_out_book/69" for 127.0.0.1 at 2024-12-29 17:50:00 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"69"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/give_out_book/69" for 127.0.0.1 at 2024-12-29 17:50:01 +0300
+Processing by OperationsController#create as TURBO_STREAM
+  Parameters: {"operation"=>{"email"=>"[FILTERED]"}, "commit"=>"Выдать книгу", "book_id"=>"69"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 217], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mOperation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "operations" WHERE "operations"."user_id" = $1 AND "operations"."book_id" = $2 AND "operations"."returned" IS NULL LIMIT $3[0m  [["user_id", 217], ["book_id", 69], ["LIMIT", 1]]
+  [1m[36mOperation Create (0.3ms)[0m  [1m[32mINSERT INTO "operations" ("user_id", "book_id", "took", "returned") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 217], ["book_id", 69], ["took", "2024-12-29 14:50:01.071679"], ["returned", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["name", "book"], ["id", 69], ["LIMIT", 1]]
+  [1m[36mBook Update (0.1ms)[0m  [1m[33mUPDATE "books" SET "count" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["count", 199], ["updated_at", "2024-12-29 14:50:01.091878"], ["id", 69]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/admin_dashboard/all_books
+Completed 302 Found in 23ms (ActiveRecord: 2.2ms (8 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:50:01 +0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 69]]
+  Rendered books/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+AdminWorkflowTest: test_adding_book_and_showing_all_books
+---------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:50:01.558592"], ["updated_at", "2024-12-29 14:50:01.558592"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:50:01 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:50:01 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 189ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"name"=>"book", "author"=>"author", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "book"], ["author", "author"], ["count", 100], ["created_at", "2024-12-29 14:50:02.470258"], ["updated_at", "2024-12-29 14:50:02.470258"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 70]]
+  Rendered books/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:02 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin_dashboard/new_book" for 127.0.0.1 at 2024-12-29 17:50:03 +0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"name"=>"book", "author"=>"author", "count"=>"100"}, "commit"=>"Добавить книгу"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."name" = $1 LIMIT $2[0m  [["name", "book"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."name" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["name", "book"], ["id", 70], ["LIMIT", 1]]
+  [1m[36mBook Update (0.1ms)[0m  [1m[33mUPDATE "books" SET "count" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["count", 200], ["updated_at", "2024-12-29 14:50:03.390342"], ["id", 70]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:50:03 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2024-12-29 17:50:03 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = $1 AND "operations"."returned" IS NULL[0m  [["book_id", 70]]
+  Rendered books/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+AdminWorkflowTest: test_admin_dashboard_show
+--------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2024-12-29 14:50:06.133774"], ["updated_at", "2024-12-29 14:50:06.133774"], ["role", "admin"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2024-12-29 17:50:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2024-12-29 17:50:06 +0300
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:49578/admin_dashboard
+Completed 302 Found in 189ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+Started GET "/admin_dashboard" for 127.0.0.1 at 2024-12-29 17:50:06 +0300
+Processing by AdminDashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin_dashboard/index.html.erb within layouts/application
+  Rendered admin_dashboard/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m

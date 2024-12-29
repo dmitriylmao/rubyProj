@@ -19,9 +19,9 @@ class UserWorkflowTest < ApplicationSystemTestCase
     assert_current_path "/user_dashboard"
 
     assert page.has_content?("Взятые книги"), "Нет надписи 'Взятые книги'"
-    assert page.has_content?("Каталог книг"), "Нет надписи 'Каталог книг'"
+    assert page.has_content?("Каталог"), "Нет надписи 'Каталог книг'"
     assert page.has_content?("История"), "Нет надписи 'История'"
-    assert page.has_content?("Выход из аккаунта"), "Нет надписи 'Выход из аккаунта'"
+    assert page.has_content?("Выход"), "Нет надписи 'Выход из аккаунта'"
 
 
   end
@@ -30,7 +30,7 @@ class UserWorkflowTest < ApplicationSystemTestCase
     register_user
     assert_current_path "/user_dashboard"
 
-    click_on "Выход из аккаунта"
+    click_on "Выход"
     assert_current_path "/"
 
     click_on "Регистрация"
@@ -39,8 +39,8 @@ class UserWorkflowTest < ApplicationSystemTestCase
     click_on "Войти"
     assert_current_path "/login"
 
-    fill_in "Email", with: "test@example.com"
-    fill_in "Password", with: "123456"
+    fill_in "Электронная почта", with: "test@example.com"
+    fill_in "Пароль", with: "123456"
     click_on "Войти"
     assert_current_path "/user_dashboard"
   end
@@ -48,10 +48,10 @@ class UserWorkflowTest < ApplicationSystemTestCase
   private
   def register_user
     visit "/register"
-    fill_in "Username", with: "testUser"
-    fill_in "Email",  with: "test@example.com"
-    fill_in "Password", with: "123456"
-    fill_in "Password confirmation", with: "123456"
+    fill_in "Логин", with: "testUser"
+    fill_in "Почта",  with: "test@example.com"
+    fill_in "Пароль", with: "123456"
+    fill_in "Подтверждение пароля", with: "123456"
     click_on "Зарегистрироваться"
   end
 

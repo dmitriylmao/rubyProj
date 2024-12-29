@@ -50,9 +50,9 @@ class AdminWorkflowTest < ApplicationSystemTestCase
 
     visit "admin_dashboard/new_book"
     @book1 = create(:book)
-    fill_in "Name", with: @book1.name
-    fill_in "Author", with: @book1.author
-    fill_in "Count", with: @book1.count
+    fill_in "Название", with: @book1.name
+    fill_in "Автор", with: @book1.author
+    fill_in "Количество", with: @book1.count
     click_on "Добавить книгу"
 
 
@@ -71,26 +71,26 @@ class AdminWorkflowTest < ApplicationSystemTestCase
   private
   def admin_login
     visit "/login"
-    fill_in "Email", with: @admin.email
-    fill_in "Password", with: "123456"
+    fill_in "Электронная почта", with: @admin.email
+    fill_in "Пароль", with: "123456"
     click_on "Войти"
   end
 
   def add_book
     visit "admin_dashboard/new_book"
     @book = build(:book)
-    fill_in "Name", with: @book.name
-    fill_in "Author", with: @book.author
-    fill_in "Count", with: @book.count
+    fill_in "Название", with: @book.name
+    fill_in "Автор", with: @book.author
+    fill_in "Количество", with: @book.count
     click_on "Добавить книгу"
   end
 
   def register_user
     visit "/register"
-    fill_in "Username", with: "testUser"
-    fill_in "Email",  with: "test@example.com"
-    fill_in "Password", with: "123456"
-    fill_in "Password confirmation", with: "123456"
+    fill_in "Логин", with: "testUser"
+    fill_in "Почта",  with: "test@example.com"
+    fill_in "Пароль", with: "123456"
+    fill_in "Подтверждение пароля", with: "123456"
     click_on "Зарегистрироваться"
   end
 end
