@@ -1,30 +1,41 @@
-<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <h1 class="text-2xl font-bold mb-6">Книги, которые Вы уже вернули</h1>
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-yellow-100 via-emerald-200 to-cyan-300 p-8 relative">
 
-  <div class="w-full max-w-md">
-    <table class="min-w-full bg-white border border-gray-300">
-     <thead>
-      <tr class="bg-gray-200">
-        <th class="py-2 px-4 border-b">Название книги</th>
-        <th class="py-2 px-4 border-b">Автор</th>
-        <th class="py-2 px-4 border-b">Дата взятия</th>
-        <th class="py-2 px-4 border-b">Дата возвращения</th>
+  <!-- Назад -->
+  <div class="absolute top-8 left-8">
+    <%= button_to user_dashboard_path, method: :get, class: 'w-12 h-12 flex items-center justify-center bg-cyan-900 text-white rounded-full shadow-xl hover:bg-yellow-900 transition-all duration-300 ease-in-out' do %>
+      <span class="w-6 h-6 flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </span>
+    <% end %>
+  </div>
+
+  <h1 class="text-6xl font-extrabold text-gray-800 mb-12 drop-shadow-lg font-montserrat">
+    Книги, которые Вы уже вернули
+  </h1>
+
+  <div class="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
+    <table class="min-w-full text-lg text-gray-700">
+      <thead class="bg-gradient-to-l from-yellow-900 to-cyan-900 text-white">
+      <tr>
+        <th class="py-4 px-6 text-left">Название</th>
+        <th class="py-4 px-6 text-left">Автор</th>
+        <th class="py-4 px-6 text-center">Дата выдачи</th>
+        <th class="py-4 px-6 text-right">Дата возврата</th>
       </tr>
       </thead>
       <tbody>
       <% @operations.each do |operation| %>
-        <tr class="hover:bg-gray-100">
-          <td class="py-2 px-4 border-b"><%= Book.find_by_id(operation.book).name %></td>
-          <td class="py-2 px-4 border-b"><%= Book.find_by_id(operation.book).author %></td>
-          <td class="py-2 px-4 border-b"><%= operation.took.strftime("%d-%m-%Y") %></td>
-          <td class="py-2 px-4 border-b"><%= operation.returned.strftime("%d-%m-%Y") %></td>
+        <tr class="hover:bg-yellow-100 transition-all duration-300 ease-in-out">
+          <td class="py-4 px-6 border-b border-gray-300"><%= Book.find_by_id(operation.book).name %></td>
+          <td class="py-4 px-6 border-b border-gray-300"><%= Book.find_by_id(operation.book).author %></td>
+          <td class="py-4 px-6 border-b border-gray-300 text-center"><%= operation.took.strftime("%d-%m-%Y") %></td>
+          <td class="py-4 px-6 border-b border-gray-300 text-right"><%= operation.returned.strftime("%d-%m-%Y") %></td>
         </tr>
       <% end %>
       </tbody>
     </table>
   </div>
 
-  <div class="mt-6">
-    <%= button_to 'Назад', user_dashboard_path, method: :get, class: 'px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600' %>
- </div>
 </div>
