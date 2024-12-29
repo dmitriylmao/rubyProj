@@ -22,6 +22,7 @@ class OperationsController < ApplicationController
     user = User.find_by_id(params[:user_id])
     book = Book.find_by_id(params[:book_id])
 
+    # исправление
     if user.nil? || book.nil? || Operation.where(user_id: user.id, book_id: book.id, returned: nil).empty?
       redirect_to admin_dashboard_take_book_path(params[:book_id])
       return

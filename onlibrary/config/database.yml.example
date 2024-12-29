@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres # Плейсхолдер
+  password: password # Плейсхолдер - НИКОГДА НЕ ХРАНИТЕ ЗДЕСЬ РЕАЛЬНЫЙ ПАРОЛЬ
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: myapp_development # Пример имени базы данных
+
+test:
+  <<: *default
+  database: myapp_test # Пример имени базы данных
+
+production:
+  <<: *default
+  database: myapp_production # Пример имени базы данных
