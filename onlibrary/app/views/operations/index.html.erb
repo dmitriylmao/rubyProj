@@ -8,8 +8,6 @@
   <style>
       body {
           font-family: sans-serif;
-          background-color: #ffffff;
-          color: #000080;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -23,6 +21,7 @@
           text-align: center;
           width: 95%;
           max-width: 800px;
+          background-image: linear-gradient(to right, #00ccff, #33ff99);
       }
       h1 {
           font-size: 2rem;
@@ -30,6 +29,8 @@
           margin-bottom: 2rem;
           width: 100%;
           word-wrap: break-word;
+          color: #fff;
+
       }
 
       h1 span.user-info-break {
@@ -40,7 +41,7 @@
           display: inline-block;
       }
       .button {
-          background-color: #FF8C00;
+          background-color: #4CAF50;
           color: white;
           padding: 1rem 2rem;
           border: none;
@@ -50,15 +51,15 @@
           font-weight: 600;
           font-size: 1.1rem;
           outline: none;
-          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+          box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 
       }
       .button:hover {
-          background-color: #FF7300;
+          background-color: #388E3C;
       }
       .button:focus {
           outline: none;
-          box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.5);
+          box-shadow: 0 0 0 2px rgba(56, 142, 60, 0.5);
 
       }
       .form-wrapper {
@@ -68,7 +69,7 @@
       }
   </style>
 </head>
-<body>
+<body class="bg-gradient-to-r from-blue-500 to-green-500">
 <div class="container">
   <h1 style="text-align:center">
     <span class="inline-text">Принять книгу <%= @book.name %></span>
