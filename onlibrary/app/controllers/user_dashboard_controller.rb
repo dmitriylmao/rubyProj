@@ -1,7 +1,10 @@
 class UserDashboardController < ApplicationController
   before_action :authenticate_user
   def index
-
+    user = User.find_by_id(session[:current_user])
+    if user.nil? || user.role != UsersController::Roles::USER
+      redirect_to "/"
+    end
   end
 
   def show
