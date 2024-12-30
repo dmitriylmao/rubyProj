@@ -42942,3 +42942,31 @@ Completed 200 OK in 242ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cach
 
 [dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Writing application-a961d2ba.css
+Writing application-0405dba2.js
+Writing application-69af5855.js.map
+Writing application.tailwind-a734f247.css
+Writing stimulus-autoloader-9d447422.js
+Writing stimulus-importmap-autoloader-64cc03e1.js
+Writing stimulus-loading-1fc53fe7.js
+Writing stimulus-d59b3b7f.js
+Writing stimulus.min-4b1e420e.js
+Writing stimulus.min-2395e199.js.map
+Writing turbo-86e38c3c.js
+Writing turbo.min-fae85750.js
+Writing turbo.min-5dd5a71a.js.map
+Writing actiontext.esm-f1c04d34.js
+Writing actiontext-a4ee937e.js
+Writing trix-0d050b00.js
+Writing trix-c4e7be2d.css
+Writing actioncable.esm-e0ec9819.js
+Writing actioncable-ac25813f.js
+Writing action_cable-5212cfee.js
+Writing activestorage.esm-f2909226.js
+Writing activestorage-32201f68.js
+Writing rails-ujs.esm-e925103b.js
+Writing rails-ujs-20eaf715.js
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
