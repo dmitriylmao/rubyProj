@@ -352,7 +352,6 @@ DEPENDENCIES
   jsbundling-rails
   kamal
   net-pop
-  net-protocol
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
