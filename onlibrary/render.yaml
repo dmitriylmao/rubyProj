@@ -1,0 +1,21 @@
+databases:
+    - name: onlibrary
+      databasename: onlibrary
+      user: onlibrary
+      plan: free
+
+services:
+    - type: web
+      name: onlibrary
+      runtime: ruby
+      plan: free
+      buildCommand: "./bin/render-build.sh"
+      startCommand: "bundle exec rails server"
+      envVars:
+        - key: DATABASE_URL
+          fromDataBase:
+            name: onlibrary
+            property: conectionString
+        - key: RAILS_MASTER_KEY
+          sync:false- key: WEB_CONCURRENCY
+          value: 2
