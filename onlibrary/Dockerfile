@@ -45,8 +45,9 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 
-# Ensure dependencies are up-to-date by running bundle update for net-pop
-RUN bundle update net-pop && \
+# Disable frozen mode to allow Gemfile.lock to be updated in the build process
+RUN bundle config set frozen false && \
+    bundle update net-pop && \
     bundle install --deployment && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
     bundle exec bootsnap precompile --gemfile
