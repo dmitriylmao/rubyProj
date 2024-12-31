@@ -22,27 +22,27 @@ default: &default
 development:
   <<: *default
   database: onlibrary_development
-  username: <%= ENV["DATABASE_USERNAME"] %> # это переменная для логина
-  password: <%= ENV["DATABASE_PASSWORD"] %> # это переменная для пароля
-  host: localhost
-  port: 5432
+  username: <%= ENV["DATABASE_USERNAME"] %>  # Логин базы данных из переменной окружения
+  password: <%= ENV["DATABASE_PASSWORD"] %>  # Пароль базы данных из переменной окружения
+  host: localhost   # Для локальной разработки
+  port: 5432        # Порт для PostgreSQL
 
 test:
   <<: *default
   database: onlibrary_test
   username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  host: localhost
+  host: localhost   # Для тестовой базы данных на локальной машине
   port: 5432
 
 production:
   primary: &primary_production
     <<: *default
     database: onlibrary_production
-    username: onlibrary
-    password: <%= ENV["ONLIBRARY_DATABASE_PASSWORD"] %> # переменная окружения с паролем для продакшн базы данных
-    host: <%= ENV["DATABASE_HOST"] %> # переменная окружения для хоста (например, на Render это будет host базы данных)
-    port: 5432 # Обычно порт остается стандартным, если не используется другой
+    username: onlibrary   # Логин для продакшн базы данных
+    password: <%= ENV["ONLIBRARY_DATABASE_PASSWORD"] %>  # Пароль для продакшн базы данных
+    host: <%= ENV["DATABASE_HOST"] %>  # Это переменная окружения для хоста на платформе
+    port: 5432       # Обычно используется стандартный порт для PostgreSQL
 
   cache:
     <<: *primary_production
