@@ -42942,3 +42942,5 @@ Completed 200 OK in 242ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cach
 
 [dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
