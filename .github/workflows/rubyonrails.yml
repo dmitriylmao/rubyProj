@@ -41,11 +41,15 @@ jobs:
         run: bundle install
 
       - name: Configure database
+        working-directory: ./onlibrary
         run: |
           cp config/database.yml.example config/database.yml
           sed -i 's/password/password/' config/database.yml # Заменяем пароль в config/database.yml
-          bundle exec rails db:create db:migrate # Создаем и мигрируем базу данных
+          bundle exec rails db:create
+          bundle exec rails db:migrate
 
       - name: Run tests
         working-directory: ./onlibrary
-        run: rails test
+        run: |
+          bundle exec rails db:test:prepare
+          rails test

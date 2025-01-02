@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список книг</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      body {
+          font-family: sans-serif;
+      }
+      .shadow-md {
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500">
+<div class="container mx-auto p-4 mt-10">
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold mb-8 text-gray-900 drop-shadow-lg">Книжная полка</h1>
+
+    <div class="mb-6 flex space-x-4 items-center justify-start w-full max-w-4xl">
+      <div class="flex space-x-4 items-center">
+        <%= link_to 'Добавить новую книгу', admin_dashboard_new_book_path,
+                    class: 'inline-block px-5 py-3 text-gray-900 bg-sky-400 rounded-md shadow-md hover:bg-sky-500 transition duration-200' %>
+        <%= link_to 'В меню', admin_dashboard_path,
+                    class: 'inline-block px-5 py-3 bg-amber-400 text-gray-900 rounded-md shadow-md hover:bg-amber-500 transition duration-200' %>
+      </div>
+    </div>
+
+    <div class="shadow-md overflow-hidden rounded-lg w-full max-w-4xl">
+      <table class="min-w-full bg-white">
+        <thead class="bg-green-400">
+        <tr class="text-white">
+          <th class="py-3 px-4 text-center font-semibold">Название</th>
+          <th class="py-3 px-4 text-center font-semibold">Автор</th>
+          <th class="py-3 px-4 text-center font-semibold">Количество</th>
+          <th class="py-3 px-4 text-center font-semibold">Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @books.each_with_index do |book, index| %>
+          <tr class="<%= index.even? ? 'bg-gray-50' : '' %> border-b transition-colors duration-200 hover:bg-gray-100">
+            <td class="py-3 px-4 text-blue-700"><%= book.name %></td>
+            <td class="py-3 px-4 text-blue-700"><%= book.author %></td>
+            <td class="py-3 px-4 text-blue-700"><%= book.count %></td>
+            <td class="py-3 px-4">
+              <div class="flex space-x-2 justify-center">
+                <% if book.count > 0 %>
+                  <%= link_to 'Выдать', admin_dashboard_give_out_book_path(book.id),
+                              class: 'inline-block px-3 py-1 bg-green-500 text-gray-900 rounded-md shadow-md hover:bg-green-600 transition duration-200 text-sm' %>
+                <% else %>
+                  <span class="inline-block px-3 py-1 text-gray-400 rounded-md shadow-md  text-sm">Выдать</span>
+                <% end %>
+
+                <% if Operation.where(book_id: book.id, returned: nil).count != 0%>
+                  <%= link_to 'Принять', admin_dashboard_take_book_path(book.id),
+                              class: 'inline-block px-3 py-1 bg-red-500 text-gray-900 rounded-md shadow-md hover:bg-red-600 transition duration-200 text-sm' %>
+                <% else %>
+                  <span class="inline-block px-3 py-1 text-gray-400 rounded-md shadow-md  text-sm">Принять</span>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

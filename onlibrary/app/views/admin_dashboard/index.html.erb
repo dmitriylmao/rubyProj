@@ -1,0 +1,17 @@
+<div class="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-sky-500 to-fuchsia-500">
+
+  <h1 class="text-6xl font-extrabold mb-10 text-gray-800 font-'Montserrat'">Администраторская панель</h1>
+
+  <div class="grid justify-between grid-cols-3 gap-5 w-full max-w-4xl px-4">
+
+    <%= button_to 'Добавить книги в базу данных', admin_dashboard_new_book_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-cyan-500 to-cyan-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat ' %>
+
+    <%= button_to 'Посмотреть книги из базы данных', admin_dashboard_all_books_path, method: :get, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-amber-500 to-amber-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
+
+    <%# button_to 'Выдать книгу пользователю', admin_dashboard_give_out_book_path, method: :get, class: 'px-6 py-3 text-white bg-yellow-600 rounded-lg shadow hover:bg-yellow-700 transition' %>
+
+    <%= button_to 'Выйти из аккаунта', logout_path, method: :delete, class: 'flex items-center justify-center w-full aspect-square bg-gradient-to-t from-red-500 to-rose-300 text-white rounded-3xl shadow-md hover:shadow-2xl hover:scale-110 hover:bg-opacity-80 transition-all duration-300 ease-in-out text-center text-2xl font-montserrat' %>
+
+  </div>
+
+</div>

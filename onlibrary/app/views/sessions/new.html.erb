@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в аккаунт</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 p-8 relative">
+
+<div class="bg-gradient-to-r from-blue-400 to-purple-600 p-10 rounded-lg shadow-xl w-full max-w-md relative mt-10">
+  <h2 class="text-4xl font-extrabold text-center mb-6 text-white drop-shadow-lg">Вход</h2>
+  <%= form_for :session do |f| %>
+    <div class="mb-4">
+      <%= f.label :email,"Электронная почта", class: "block text-sm font-medium text-white" %>
+      <%= f.email_field :email, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    </div>
+    <div class="mb-4">
+      <%= f.label :password,"Пароль", class: "block text-sm font-medium text-white" %>
+      <%= f.password_field :password, required: true, class: "mt-1 block w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    </div>
+    <%= f.submit "Войти", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md transition duration-300" %>
+  <% end %>
+  <p class="mt-4 text-center text-sm text-white">Нет аккаунта? <%= link_to 'Зарегистрироваться', register_path, class: "text-blue-400 hover:underline" %></p>
+</div>
+
+</body>
+</html>
