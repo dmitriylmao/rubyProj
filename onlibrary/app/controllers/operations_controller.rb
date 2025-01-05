@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class OperationsController < ApplicationController
-
+  before_action :authenticate_admin
   def new
 
   end

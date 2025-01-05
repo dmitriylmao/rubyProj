@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BooksController < ApplicationController
+  before_action :authenticate_admin
   def new
 
   end
@@ -8,6 +9,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
   end
+
   def create
     found_book = Book.find_by_name(book_params[:name])
     if !found_book.nil? && found_book.author == book_params[:author]
