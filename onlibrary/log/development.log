@@ -42944,3 +42944,306 @@ Completed 200 OK in 242ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cach
 [dotenv] Loaded [33m.env[0m
 [dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2025-01-05 16:45:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 105.5ms | GC: 0.0ms)
+Completed 200 OK in 874ms (Views: 167.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/" for 127.0.0.1 at 2025-01-05 16:45:26 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 487ms (ActiveRecord: 29.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 16:45:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 58.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | GC: 0.2ms)
+Completed 200 OK in 292ms (Views: 60.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2025-01-05 16:45:31 +0300
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='admin_dashboard'*/[0m
+  ↳ app/controllers/admin_dashboard_controller.rb:6:in `index'
+Redirected to http://127.0.0.1:3000/register
+Completed 302 Found in 226ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2025-01-05 16:45:32 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 238ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2025-01-05 16:45:37 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:42:in `each_with_index'
+  [1m[36mOperation Count (5.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 3 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  [1m[36mOperation Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "operations" WHERE "operations"."book_id" = 2 AND "operations"."returned" IS NULL /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:56
+  Rendered books/index.html.erb within layouts/application (Duration: 53.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | GC: 0.0ms)
+Completed 200 OK in 278ms (Views: 41.6ms | ActiveRecord: 14.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/borrowed_books" for 127.0.0.1 at 2025-01-05 16:45:49 +0300
+Processing by UserDashboardController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 209ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 16:45:49 +0300
+Processing by SessionsController#new as HTML
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2025-01-05 16:45:49 +0300
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 234ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 238ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/all_books" for 127.0.0.1 at 2025-01-05 16:47:17 +0300
+Processing by UserDashboardController#all_books as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='all_books',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 212ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 16:47:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 213ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2025-01-05 16:49:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.7ms | GC: 0.0ms)
+Completed 200 OK in 864ms (Views: 166.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2025-01-05 16:49:25 +0300
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:14:in `index'
+Redirected to http://127.0.0.1:3000/register
+Completed 302 Found in 568ms (ActiveRecord: 9.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2025-01-05 16:49:25 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 40.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | GC: 0.0ms)
+Completed 200 OK in 283ms (Views: 43.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/new_book" for 127.0.0.1 at 2025-01-05 16:49:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new_book"):
+  
+Started GET "/admin_dashboard/new_book" for 127.0.0.1 at 2025-01-05 16:50:19 +0300
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:6:in `new'
+Redirected to http://127.0.0.1:3000/register
+Completed 302 Found in 212ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2025-01-05 16:50:19 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 213ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "//admin_dashboard/give_out_book/1" for 127.0.0.1 at 2025-01-05 16:50:31 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering operations/new.html.erb within layouts/application
+  Rendered operations/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 241ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2025-01-05 16:51:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | GC: 0.0ms)
+Completed 200 OK in 440ms (Views: 21.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/take_book/1" for 127.0.0.1 at 2025-01-05 16:51:30 +0300
+Processing by OperationsController#show as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mOperation Pluck (0.9ms)[0m  [1m[34mSELECT "operations"."user_id" FROM "operations" WHERE "operations"."book_id" = 1 AND "operations"."returned" IS NULL /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:15:in `show'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/operations_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (2, 3) /*action='show',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/views/operations/show.html.erb:16
+  Rendered operations/show.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 401ms (Views: 6.9ms | ActiveRecord: 17.0ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2025-01-05 16:51:38 +0300
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='admin_dashboard'*/[0m
+  ↳ app/controllers/admin_dashboard_controller.rb:6:in `index'
+Redirected to http://127.0.0.1:3000/register
+Completed 302 Found in 212ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2025-01-05 16:51:38 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 217ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_PASSWORD[0m and [36mDATABASE_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2025-01-05 17:01:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Onlibrary'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | GC: 0.0ms)
+Completed 200 OK in 471ms (Views: 21.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard" for 127.0.0.1 at 2025-01-05 17:01:38 +0300
+Processing by AdminDashboardController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = 'admin' AND "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='admin_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `current_admin'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 319ms (ActiveRecord: 7.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 17:01:38 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.0ms)
+Completed 200 OK in 239ms (Views: 15.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_dashboard/" for 127.0.0.1 at 2025-01-05 17:01:43 +0300
+Processing by UserDashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = 'user' AND "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='user_dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:15:in `current_user'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 215ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 17:01:43 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 209ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/all_books" for 127.0.0.1 at 2025-01-05 17:01:48 +0300
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = 'admin' AND "users"."id" IS NULL LIMIT 1 /*action='index',application='Onlibrary',controller='books'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `current_admin'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 201ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 17:01:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 205ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin_dashboard/give_out_book/" for 127.0.0.1 at 2025-01-05 17:01:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin_dashboard/give_out_book"):
+  
+Started GET "/admin_dashboard/give_out_book/1" for 127.0.0.1 at 2025-01-05 17:02:02 +0300
+Processing by OperationsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = 'admin' AND "users"."id" IS NULL LIMIT 1 /*action='new',application='Onlibrary',controller='operations'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `current_admin'
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 213ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-01-05 17:02:02 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 208ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
